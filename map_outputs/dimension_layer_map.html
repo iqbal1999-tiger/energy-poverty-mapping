@@ -1,0 +1,3483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_406fffb6ba30c356aa9d9c4a006159da {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_406fffb6ba30c356aa9d9c4a006159da" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_406fffb6ba30c356aa9d9c4a006159da = L.map(
+                "map_406fffb6ba30c356aa9d9c4a006159da",
+                {
+                    center: [23.7, 90.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a962c8aabcffefc57037db5c5e2b5be3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a962c8aabcffefc57037db5c5e2b5be3.addTo(map_406fffb6ba30c356aa9d9c4a006159da);
+        
+    
+            var tile_layer_ae349c103aad8c9708946b8458c61fcf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_beda7bc9863d67641887b904952570d7 = new L.Control.MiniMap(
+                tile_layer_ae349c103aad8c9708946b8458c61fcf,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_406fffb6ba30c356aa9d9c4a006159da.addControl(mini_map_beda7bc9863d67641887b904952570d7);
+        
+    
+            var feature_group_670a408bd5b9229be43ef53adb60fe55 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_58eb5cef9360eccb8ae5c39f0bdd3b3b = L.circleMarker(
+                [20.86, 92.3],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bc141a", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_e0a9434cdedd4fb7fb6b5e3c349a1139 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0c8cb477383f14e94944a7960d46c34f = $(`<div id="html_0c8cb477383f14e94944a7960d46c34f" style="width: 100.0%; height: 100.0%;"><b>Teknaf</b><br><b>Energy Availability Score:</b> 0.797<br><b>Overall MEPI:</b> 0.749</div>`)[0];
+                popup_e0a9434cdedd4fb7fb6b5e3c349a1139.setContent(html_0c8cb477383f14e94944a7960d46c34f);
+            
+        
+
+        circle_marker_58eb5cef9360eccb8ae5c39f0bdd3b3b.bindPopup(popup_e0a9434cdedd4fb7fb6b5e3c349a1139)
+        ;
+
+        
+    
+    
+            circle_marker_58eb5cef9360eccb8ae5c39f0bdd3b3b.bindTooltip(
+                `<div>
+                     Teknaf | Availability: 0.797
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed67e206e08ab2d78ea1fbc46e0d8cb5 = L.circleMarker(
+                [21.22, 92.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d21f20", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_d0df2b1cd319cbce027769129d843ed1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6e114cb4ee4e49a2038533bd2f7d49bc = $(`<div id="html_6e114cb4ee4e49a2038533bd2f7d49bc" style="width: 100.0%; height: 100.0%;"><b>Ukhia</b><br><b>Energy Availability Score:</b> 0.725<br><b>Overall MEPI:</b> 0.666</div>`)[0];
+                popup_d0df2b1cd319cbce027769129d843ed1.setContent(html_6e114cb4ee4e49a2038533bd2f7d49bc);
+            
+        
+
+        circle_marker_ed67e206e08ab2d78ea1fbc46e0d8cb5.bindPopup(popup_d0df2b1cd319cbce027769129d843ed1)
+        ;
+
+        
+    
+    
+            circle_marker_ed67e206e08ab2d78ea1fbc46e0d8cb5.bindTooltip(
+                `<div>
+                     Ukhia | Availability: 0.725
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fa03ac28851d92f0b934c8a579cc732 = L.circleMarker(
+                [22.49, 92.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8161", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_fb285525a89804c20208482ceadd8a6e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f22bf6efa0829b0c6e52ec4e2b0218b8 = $(`<div id="html_f22bf6efa0829b0c6e52ec4e2b0218b8" style="width: 100.0%; height: 100.0%;"><b>Rangunia</b><br><b>Energy Availability Score:</b> 0.426<br><b>Overall MEPI:</b> 0.367</div>`)[0];
+                popup_fb285525a89804c20208482ceadd8a6e.setContent(html_f22bf6efa0829b0c6e52ec4e2b0218b8);
+            
+        
+
+        circle_marker_1fa03ac28851d92f0b934c8a579cc732.bindPopup(popup_fb285525a89804c20208482ceadd8a6e)
+        ;
+
+        
+    
+    
+            circle_marker_1fa03ac28851d92f0b934c8a579cc732.bindTooltip(
+                `<div>
+                     Rangunia | Availability: 0.426
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cdf0a88d2572124c05e928a9c80e9f8 = L.circleMarker(
+                [22.3, 91.98],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc9474", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_0cf04d563d689eb52ffe470dbac8f849 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_bc1b55952b10c6deff8293131200e127 = $(`<div id="html_bc1b55952b10c6deff8293131200e127" style="width: 100.0%; height: 100.0%;"><b>Patiya</b><br><b>Energy Availability Score:</b> 0.370<br><b>Overall MEPI:</b> 0.318</div>`)[0];
+                popup_0cf04d563d689eb52ffe470dbac8f849.setContent(html_bc1b55952b10c6deff8293131200e127);
+            
+        
+
+        circle_marker_1cdf0a88d2572124c05e928a9c80e9f8.bindPopup(popup_0cf04d563d689eb52ffe470dbac8f849)
+        ;
+
+        
+    
+    
+            circle_marker_1cdf0a88d2572124c05e928a9c80e9f8.bindTooltip(
+                `<div>
+                     Patiya | Availability: 0.370
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3e27cde689a37087636235da5c50d92 = L.circleMarker(
+                [23.59, 90.14],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdc9b3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_d590e573e10588f0bd33cb4a9cd3393e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0e172a45d900f5ef9533c54358d57c1d = $(`<div id="html_0e172a45d900f5ef9533c54358d57c1d" style="width: 100.0%; height: 100.0%;"><b>Dohar</b><br><b>Energy Availability Score:</b> 0.206<br><b>Overall MEPI:</b> 0.183</div>`)[0];
+                popup_d590e573e10588f0bd33cb4a9cd3393e.setContent(html_0e172a45d900f5ef9533c54358d57c1d);
+            
+        
+
+        circle_marker_f3e27cde689a37087636235da5c50d92.bindPopup(popup_d590e573e10588f0bd33cb4a9cd3393e)
+        ;
+
+        
+    
+    
+            circle_marker_f3e27cde689a37087636235da5c50d92.bindTooltip(
+                `<div>
+                     Dohar | Availability: 0.206
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f1b6f3b5320da9dbdf1643e0077b475 = L.circleMarker(
+                [23.61, 90.02],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed9c9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_101966e0addd9faeba222507b532afa7 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f94b1ed15b5bc817366136f3b8da25b2 = $(`<div id="html_f94b1ed15b5bc817366136f3b8da25b2" style="width: 100.0%; height: 100.0%;"><b>Nawabganj</b><br><b>Energy Availability Score:</b> 0.152<br><b>Overall MEPI:</b> 0.128</div>`)[0];
+                popup_101966e0addd9faeba222507b532afa7.setContent(html_f94b1ed15b5bc817366136f3b8da25b2);
+            
+        
+
+        circle_marker_0f1b6f3b5320da9dbdf1643e0077b475.bindPopup(popup_101966e0addd9faeba222507b532afa7)
+        ;
+
+        
+    
+    
+            circle_marker_0f1b6f3b5320da9dbdf1643e0077b475.bindTooltip(
+                `<div>
+                     Nawabganj | Availability: 0.152
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6becc5e7362e1ff2be08c35bca54f6f = L.circleMarker(
+                [23.84, 90.27],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff5f0", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_507d8f9661ca6c3f1aee38b00a3faade = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_73d1c667e612b9b67af9992ae3781fc1 = $(`<div id="html_73d1c667e612b9b67af9992ae3781fc1" style="width: 100.0%; height: 100.0%;"><b>Savar</b><br><b>Energy Availability Score:</b> 0.000<br><b>Overall MEPI:</b> 0.000</div>`)[0];
+                popup_507d8f9661ca6c3f1aee38b00a3faade.setContent(html_73d1c667e612b9b67af9992ae3781fc1);
+            
+        
+
+        circle_marker_b6becc5e7362e1ff2be08c35bca54f6f.bindPopup(popup_507d8f9661ca6c3f1aee38b00a3faade)
+        ;
+
+        
+    
+    
+            circle_marker_b6becc5e7362e1ff2be08c35bca54f6f.bindTooltip(
+                `<div>
+                     Savar | Availability: 0.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b83a7b686c269dda57f10e7bdc64121 = L.circleMarker(
+                [23.71, 90.38],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feeae0", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_7b95994c71c0cf75e383d6c9d19ad3b4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_12c4fa3c2c47aa28681c23aa06784558 = $(`<div id="html_12c4fa3c2c47aa28681c23aa06784558" style="width: 100.0%; height: 100.0%;"><b>Keraniganj</b><br><b>Energy Availability Score:</b> 0.068<br><b>Overall MEPI:</b> 0.058</div>`)[0];
+                popup_7b95994c71c0cf75e383d6c9d19ad3b4.setContent(html_12c4fa3c2c47aa28681c23aa06784558);
+            
+        
+
+        circle_marker_6b83a7b686c269dda57f10e7bdc64121.bindPopup(popup_7b95994c71c0cf75e383d6c9d19ad3b4)
+        ;
+
+        
+    
+    
+            circle_marker_6b83a7b686c269dda57f10e7bdc64121.bindTooltip(
+                `<div>
+                     Keraniganj | Availability: 0.068
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f6d56566ceafe616307d571190cf67b = L.circleMarker(
+                [22.41, 89.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e02c26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_5c187f2d991da835fb2674ecbcfe49f6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3eee9b50410800f972b7ba0717840920 = $(`<div id="html_3eee9b50410800f972b7ba0717840920" style="width: 100.0%; height: 100.0%;"><b>Kaliganj</b><br><b>Energy Availability Score:</b> 0.679<br><b>Overall MEPI:</b> 0.609</div>`)[0];
+                popup_5c187f2d991da835fb2674ecbcfe49f6.setContent(html_3eee9b50410800f972b7ba0717840920);
+            
+        
+
+        circle_marker_3f6d56566ceafe616307d571190cf67b.bindPopup(popup_5c187f2d991da835fb2674ecbcfe49f6)
+        ;
+
+        
+    
+    
+            circle_marker_3f6d56566ceafe616307d571190cf67b.bindTooltip(
+                `<div>
+                     Kaliganj | Availability: 0.679
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_516f7448f29aecfe95d2805140377cf4 = L.circleMarker(
+                [22.15, 89.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a81016", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_a92eb37285f1d7d52d15e4b3ac91c8f3 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d373c0412ede65e408353673f99ece48 = $(`<div id="html_d373c0412ede65e408353673f99ece48" style="width: 100.0%; height: 100.0%;"><b>Shyamnagar</b><br><b>Energy Availability Score:</b> 0.866<br><b>Overall MEPI:</b> 0.834</div>`)[0];
+                popup_a92eb37285f1d7d52d15e4b3ac91c8f3.setContent(html_d373c0412ede65e408353673f99ece48);
+            
+        
+
+        circle_marker_516f7448f29aecfe95d2805140377cf4.bindPopup(popup_a92eb37285f1d7d52d15e4b3ac91c8f3)
+        ;
+
+        
+    
+    
+            circle_marker_516f7448f29aecfe95d2805140377cf4.bindTooltip(
+                `<div>
+                     Shyamnagar | Availability: 0.866
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cfaab84f125a83245ffd42bf33041956 = L.circleMarker(
+                [25.07, 91.4],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f6563d", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_f48fe2d5f2357af88daadec568aaf277 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8e23d1db043c77f784ec7c8dd7706a90 = $(`<div id="html_8e23d1db043c77f784ec7c8dd7706a90" style="width: 100.0%; height: 100.0%;"><b>Sunamganj Sadar</b><br><b>Energy Availability Score:</b> 0.553<br><b>Overall MEPI:</b> 0.485</div>`)[0];
+                popup_f48fe2d5f2357af88daadec568aaf277.setContent(html_8e23d1db043c77f784ec7c8dd7706a90);
+            
+        
+
+        circle_marker_cfaab84f125a83245ffd42bf33041956.bindPopup(popup_f48fe2d5f2357af88daadec568aaf277)
+        ;
+
+        
+    
+    
+            circle_marker_cfaab84f125a83245ffd42bf33041956.bindTooltip(
+                `<div>
+                     Sunamganj Sadar | Availability: 0.553
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d0521d4141c6a5a4793cb8b1f08cf43 = L.circleMarker(
+                [25.1, 91.2],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ea362a", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_9ac0ed60385e038600ed3f24e15d3ae8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_95d795d934fd9a7a6d3298cea8aa26eb = $(`<div id="html_95d795d934fd9a7a6d3298cea8aa26eb" style="width: 100.0%; height: 100.0%;"><b>Tahirpur</b><br><b>Energy Availability Score:</b> 0.643<br><b>Overall MEPI:</b> 0.558</div>`)[0];
+                popup_9ac0ed60385e038600ed3f24e15d3ae8.setContent(html_95d795d934fd9a7a6d3298cea8aa26eb);
+            
+        
+
+        circle_marker_9d0521d4141c6a5a4793cb8b1f08cf43.bindPopup(popup_9ac0ed60385e038600ed3f24e15d3ae8)
+        ;
+
+        
+    
+    
+            circle_marker_9d0521d4141c6a5a4793cb8b1f08cf43.bindTooltip(
+                `<div>
+                     Tahirpur | Availability: 0.643
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0bc03e47f1364ec14506f729c1ae8198 = L.circleMarker(
+                [25.16, 89.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b81419", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_ffa283e254a9910b17265368c503effb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b5c2b2b2746167a1cc4bb1249588bd4a = $(`<div id="html_b5c2b2b2746167a1cc4bb1249588bd4a" style="width: 100.0%; height: 100.0%;"><b>Fulchhari</b><br><b>Energy Availability Score:</b> 0.811<br><b>Overall MEPI:</b> 0.781</div>`)[0];
+                popup_ffa283e254a9910b17265368c503effb.setContent(html_b5c2b2b2746167a1cc4bb1249588bd4a);
+            
+        
+
+        circle_marker_0bc03e47f1364ec14506f729c1ae8198.bindPopup(popup_ffa283e254a9910b17265368c503effb)
+        ;
+
+        
+    
+    
+            circle_marker_0bc03e47f1364ec14506f729c1ae8198.bindTooltip(
+                `<div>
+                     Fulchhari | Availability: 0.811
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e71b9bb1256b165f2425b801af195645 = L.circleMarker(
+                [25.09, 89.85],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c9181d", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_53b8806e9327a0210c1c2d8dd06e9923 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_93e2f24bd081df2ad4229a06fe3a863e = $(`<div id="html_93e2f24bd081df2ad4229a06fe3a863e" style="width: 100.0%; height: 100.0%;"><b>Saghata</b><br><b>Energy Availability Score:</b> 0.754<br><b>Overall MEPI:</b> 0.704</div>`)[0];
+                popup_53b8806e9327a0210c1c2d8dd06e9923.setContent(html_93e2f24bd081df2ad4229a06fe3a863e);
+            
+        
+
+        circle_marker_e71b9bb1256b165f2425b801af195645.bindPopup(popup_53b8806e9327a0210c1c2d8dd06e9923)
+        ;
+
+        
+    
+    
+            circle_marker_e71b9bb1256b165f2425b801af195645.bindTooltip(
+                `<div>
+                     Saghata | Availability: 0.754
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64b3e1fb5b1ee50d8ef494cdaaca7892 = L.circleMarker(
+                [24.37, 88.6],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffeee7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_c1473db3bf719e1028a47af1f66eb431 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4e12fd6499c353af448cbe3dc9ddf5fa = $(`<div id="html_4e12fd6499c353af448cbe3dc9ddf5fa" style="width: 100.0%; height: 100.0%;"><b>Rajshahi Sadar</b><br><b>Energy Availability Score:</b> 0.043<br><b>Overall MEPI:</b> 0.029</div>`)[0];
+                popup_c1473db3bf719e1028a47af1f66eb431.setContent(html_4e12fd6499c353af448cbe3dc9ddf5fa);
+            
+        
+
+        circle_marker_64b3e1fb5b1ee50d8ef494cdaaca7892.bindPopup(popup_c1473db3bf719e1028a47af1f66eb431)
+        ;
+
+        
+    
+    
+            circle_marker_64b3e1fb5b1ee50d8ef494cdaaca7892.bindTooltip(
+                `<div>
+                     Rajshahi Sadar | Availability: 0.043
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7e106f5ab0f06004705a337a5e56697 = L.circleMarker(
+                [24.52, 88.42],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fca183", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_7aa75dca01003ef7c459e00f93c3ec5a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a21cfe46431c86aafac7a1c835b3e1a4 = $(`<div id="html_a21cfe46431c86aafac7a1c835b3e1a4" style="width: 100.0%; height: 100.0%;"><b>Godagari</b><br><b>Energy Availability Score:</b> 0.331<br><b>Overall MEPI:</b> 0.283</div>`)[0];
+                popup_7aa75dca01003ef7c459e00f93c3ec5a.setContent(html_a21cfe46431c86aafac7a1c835b3e1a4);
+            
+        
+
+        circle_marker_c7e106f5ab0f06004705a337a5e56697.bindPopup(popup_7aa75dca01003ef7c459e00f93c3ec5a)
+        ;
+
+        
+    
+    
+            circle_marker_c7e106f5ab0f06004705a337a5e56697.bindTooltip(
+                `<div>
+                     Godagari | Availability: 0.331
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c56aecca1951d307b7eb6477a7a9556e = L.circleMarker(
+                [22.19, 92.22],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0912", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_6e88581376249a4066655327cef2847e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7fbef86dde001f30538f10103fb56e91 = $(`<div id="html_7fbef86dde001f30538f10103fb56e91" style="width: 100.0%; height: 100.0%;"><b>Bandarban Sadar</b><br><b>Energy Availability Score:</b> 0.925<br><b>Overall MEPI:</b> 0.911</div>`)[0];
+                popup_6e88581376249a4066655327cef2847e.setContent(html_7fbef86dde001f30538f10103fb56e91);
+            
+        
+
+        circle_marker_c56aecca1951d307b7eb6477a7a9556e.bindPopup(popup_6e88581376249a4066655327cef2847e)
+        ;
+
+        
+    
+    
+            circle_marker_c56aecca1951d307b7eb6477a7a9556e.bindTooltip(
+                `<div>
+                     Bandarban Sadar | Availability: 0.925
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6519c38f0a1c3a59e064738bca91adbb = L.circleMarker(
+                [22.08, 92.28],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#67000d", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_822c3eb1dc8fea9f2bff0d23d2cd597a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5a31e86be428475c4220765df2ee4cfc = $(`<div id="html_5a31e86be428475c4220765df2ee4cfc" style="width: 100.0%; height: 100.0%;"><b>Rowangchhari</b><br><b>Energy Availability Score:</b> 1.000<br><b>Overall MEPI:</b> 1.000</div>`)[0];
+                popup_822c3eb1dc8fea9f2bff0d23d2cd597a.setContent(html_5a31e86be428475c4220765df2ee4cfc);
+            
+        
+
+        circle_marker_6519c38f0a1c3a59e064738bca91adbb.bindPopup(popup_822c3eb1dc8fea9f2bff0d23d2cd597a)
+        ;
+
+        
+    
+    
+            circle_marker_6519c38f0a1c3a59e064738bca91adbb.bindTooltip(
+                `<div>
+                     Rowangchhari | Availability: 1.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c56cd0e64d5f3c46593efb6fd4befb4 = L.circleMarker(
+                [22.7, 90.37],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdd3c1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_113a535659606850cb63bbb80c3b6300 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8195cda19837c4c49e93a0da4e5ee112 = $(`<div id="html_8195cda19837c4c49e93a0da4e5ee112" style="width: 100.0%; height: 100.0%;"><b>Barishal Sadar</b><br><b>Energy Availability Score:</b> 0.171<br><b>Overall MEPI:</b> 0.154</div>`)[0];
+                popup_113a535659606850cb63bbb80c3b6300.setContent(html_8195cda19837c4c49e93a0da4e5ee112);
+            
+        
+
+        circle_marker_6c56cd0e64d5f3c46593efb6fd4befb4.bindPopup(popup_113a535659606850cb63bbb80c3b6300)
+        ;
+
+        
+    
+    
+            circle_marker_6c56cd0e64d5f3c46593efb6fd4befb4.bindTooltip(
+                `<div>
+                     Barishal Sadar | Availability: 0.171
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a823a30d30c27cc3c96702eda76dc9ad = L.circleMarker(
+                [22.61, 90.51],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fb694a", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_670a408bd5b9229be43ef53adb60fe55);
+        
+    
+        var popup_3c61b4e80195369c063a5e145fce2815 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_af8a39da140119090a17844b2433572c = $(`<div id="html_af8a39da140119090a17844b2433572c" style="width: 100.0%; height: 100.0%;"><b>Muladi</b><br><b>Energy Availability Score:</b> 0.504<br><b>Overall MEPI:</b> 0.442</div>`)[0];
+                popup_3c61b4e80195369c063a5e145fce2815.setContent(html_af8a39da140119090a17844b2433572c);
+            
+        
+
+        circle_marker_a823a30d30c27cc3c96702eda76dc9ad.bindPopup(popup_3c61b4e80195369c063a5e145fce2815)
+        ;
+
+        
+    
+    
+            circle_marker_a823a30d30c27cc3c96702eda76dc9ad.bindTooltip(
+                `<div>
+                     Muladi | Availability: 0.504
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_670a408bd5b9229be43ef53adb60fe55.addTo(map_406fffb6ba30c356aa9d9c4a006159da);
+        
+    
+            var feature_group_ee80b1ad534e27633371f132dfea41f3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_274b44f4a440d435e5a7ffc48cd7ef11 = L.circleMarker(
+                [20.86, 92.3],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e75c0c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_1a1bfb890f8e9399298e4b17e3d6903f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7b2178eaa17532593f7b3f9ae17984b8 = $(`<div id="html_7b2178eaa17532593f7b3f9ae17984b8" style="width: 100.0%; height: 100.0%;"><b>Teknaf</b><br><b>Energy Reliability Score:</b> 0.673<br><b>Overall MEPI:</b> 0.749</div>`)[0];
+                popup_1a1bfb890f8e9399298e4b17e3d6903f.setContent(html_7b2178eaa17532593f7b3f9ae17984b8);
+            
+        
+
+        circle_marker_274b44f4a440d435e5a7ffc48cd7ef11.bindPopup(popup_1a1bfb890f8e9399298e4b17e3d6903f)
+        ;
+
+        
+    
+    
+            circle_marker_274b44f4a440d435e5a7ffc48cd7ef11.bindTooltip(
+                `<div>
+                     Teknaf | Reliability: 0.673
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26467d110c292b1df2f0392449a76261 = L.circleMarker(
+                [21.22, 92.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f67925", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_05714cd7b257297b22ac36b3402c69ee = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d891f0d64d6e8481796297d7ee2e7795 = $(`<div id="html_d891f0d64d6e8481796297d7ee2e7795" style="width: 100.0%; height: 100.0%;"><b>Ukhia</b><br><b>Energy Reliability Score:</b> 0.570<br><b>Overall MEPI:</b> 0.666</div>`)[0];
+                popup_05714cd7b257297b22ac36b3402c69ee.setContent(html_d891f0d64d6e8481796297d7ee2e7795);
+            
+        
+
+        circle_marker_26467d110c292b1df2f0392449a76261.bindPopup(popup_05714cd7b257297b22ac36b3402c69ee)
+        ;
+
+        
+    
+    
+            circle_marker_26467d110c292b1df2f0392449a76261.bindTooltip(
+                `<div>
+                     Ukhia | Reliability: 0.570
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_949a2a330c5c3505e2aa8bca32d610d2 = L.circleMarker(
+                [22.49, 92.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdd5ab", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_cba57cd4099dee938c558346d2607bca = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_83d21d730945af3e1d82d8d028899666 = $(`<div id="html_83d21d730945af3e1d82d8d028899666" style="width: 100.0%; height: 100.0%;"><b>Rangunia</b><br><b>Energy Reliability Score:</b> 0.223<br><b>Overall MEPI:</b> 0.367</div>`)[0];
+                popup_cba57cd4099dee938c558346d2607bca.setContent(html_83d21d730945af3e1d82d8d028899666);
+            
+        
+
+        circle_marker_949a2a330c5c3505e2aa8bca32d610d2.bindPopup(popup_cba57cd4099dee938c558346d2607bca)
+        ;
+
+        
+    
+    
+            circle_marker_949a2a330c5c3505e2aa8bca32d610d2.bindTooltip(
+                `<div>
+                     Rangunia | Reliability: 0.223
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a64b7bdf16f7db0dc3d7e347874d3a3b = L.circleMarker(
+                [22.3, 91.98],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fedcb9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_879e26af289f507017ddfe17d8ea5f70 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_24651cbf4c01d0f0d1ca4f1113087209 = $(`<div id="html_24651cbf4c01d0f0d1ca4f1113087209" style="width: 100.0%; height: 100.0%;"><b>Patiya</b><br><b>Energy Reliability Score:</b> 0.187<br><b>Overall MEPI:</b> 0.318</div>`)[0];
+                popup_879e26af289f507017ddfe17d8ea5f70.setContent(html_24651cbf4c01d0f0d1ca4f1113087209);
+            
+        
+
+        circle_marker_a64b7bdf16f7db0dc3d7e347874d3a3b.bindPopup(popup_879e26af289f507017ddfe17d8ea5f70)
+        ;
+
+        
+    
+    
+            circle_marker_a64b7bdf16f7db0dc3d7e347874d3a3b.bindTooltip(
+                `<div>
+                     Patiya | Reliability: 0.187
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a025c0bf717a46d98d22907232689af = L.circleMarker(
+                [23.59, 90.14],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee8d2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_92bad0b0765ac6731fe840cb546350eb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4318e9c55b9084a6938750b7bcc3b794 = $(`<div id="html_4318e9c55b9084a6938750b7bcc3b794" style="width: 100.0%; height: 100.0%;"><b>Dohar</b><br><b>Energy Reliability Score:</b> 0.112<br><b>Overall MEPI:</b> 0.183</div>`)[0];
+                popup_92bad0b0765ac6731fe840cb546350eb.setContent(html_4318e9c55b9084a6938750b7bcc3b794);
+            
+        
+
+        circle_marker_1a025c0bf717a46d98d22907232689af.bindPopup(popup_92bad0b0765ac6731fe840cb546350eb)
+        ;
+
+        
+    
+    
+            circle_marker_1a025c0bf717a46d98d22907232689af.bindTooltip(
+                `<div>
+                     Dohar | Reliability: 0.112
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d684ec531b9d20510ea36234bc6dcd3a = L.circleMarker(
+                [23.61, 90.02],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feecda", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_7ad42c2905d7525b9a07ff3ef028f7a2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_fb6d7db4dd1c3c7de00396376b271054 = $(`<div id="html_fb6d7db4dd1c3c7de00396376b271054" style="width: 100.0%; height: 100.0%;"><b>Nawabganj</b><br><b>Energy Reliability Score:</b> 0.075<br><b>Overall MEPI:</b> 0.128</div>`)[0];
+                popup_7ad42c2905d7525b9a07ff3ef028f7a2.setContent(html_fb6d7db4dd1c3c7de00396376b271054);
+            
+        
+
+        circle_marker_d684ec531b9d20510ea36234bc6dcd3a.bindPopup(popup_7ad42c2905d7525b9a07ff3ef028f7a2)
+        ;
+
+        
+    
+    
+            circle_marker_d684ec531b9d20510ea36234bc6dcd3a.bindTooltip(
+                `<div>
+                     Nawabganj | Reliability: 0.075
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa31e3b44e594a07d0914a1bedeeb8a0 = L.circleMarker(
+                [23.84, 90.27],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff5eb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_24d14ff7e0232785822b35bcacec170c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d84c24dfa2dd4585a4df0e2cb6767925 = $(`<div id="html_d84c24dfa2dd4585a4df0e2cb6767925" style="width: 100.0%; height: 100.0%;"><b>Savar</b><br><b>Energy Reliability Score:</b> 0.000<br><b>Overall MEPI:</b> 0.000</div>`)[0];
+                popup_24d14ff7e0232785822b35bcacec170c.setContent(html_d84c24dfa2dd4585a4df0e2cb6767925);
+            
+        
+
+        circle_marker_fa31e3b44e594a07d0914a1bedeeb8a0.bindPopup(popup_24d14ff7e0232785822b35bcacec170c)
+        ;
+
+        
+    
+    
+            circle_marker_fa31e3b44e594a07d0914a1bedeeb8a0.bindTooltip(
+                `<div>
+                     Savar | Reliability: 0.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6edcfae82169ad5df4d97680a3a6dc05 = L.circleMarker(
+                [23.71, 90.38],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff1e4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_368db7a8c47fe78826997c5dfd495ba1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f0080ffc9f67f11177dc17b62e9b6011 = $(`<div id="html_f0080ffc9f67f11177dc17b62e9b6011" style="width: 100.0%; height: 100.0%;"><b>Keraniganj</b><br><b>Energy Reliability Score:</b> 0.034<br><b>Overall MEPI:</b> 0.058</div>`)[0];
+                popup_368db7a8c47fe78826997c5dfd495ba1.setContent(html_f0080ffc9f67f11177dc17b62e9b6011);
+            
+        
+
+        circle_marker_6edcfae82169ad5df4d97680a3a6dc05.bindPopup(popup_368db7a8c47fe78826997c5dfd495ba1)
+        ;
+
+        
+    
+    
+            circle_marker_6edcfae82169ad5df4d97680a3a6dc05.bindTooltip(
+                `<div>
+                     Keraniganj | Reliability: 0.034
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_564ee7e04bee71de08152d1b6b0cc848 = L.circleMarker(
+                [22.41, 89.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fb8836", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_9a83e906c4088094877e6ec615f583fd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_78e615584351abbba98c1f150bcbbd67 = $(`<div id="html_78e615584351abbba98c1f150bcbbd67" style="width: 100.0%; height: 100.0%;"><b>Kaliganj</b><br><b>Energy Reliability Score:</b> 0.519<br><b>Overall MEPI:</b> 0.609</div>`)[0];
+                popup_9a83e906c4088094877e6ec615f583fd.setContent(html_78e615584351abbba98c1f150bcbbd67);
+            
+        
+
+        circle_marker_564ee7e04bee71de08152d1b6b0cc848.bindPopup(popup_9a83e906c4088094877e6ec615f583fd)
+        ;
+
+        
+    
+    
+            circle_marker_564ee7e04bee71de08152d1b6b0cc848.bindTooltip(
+                `<div>
+                     Kaliganj | Reliability: 0.519
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb3e67d5c17ff7bd56bf0398bfaafeab = L.circleMarker(
+                [22.15, 89.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd4401", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_1770a17cf9bfc31ce08c03d36f0ebb5d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4488e87951efe6515ca14b0c5e030e25 = $(`<div id="html_4488e87951efe6515ca14b0c5e030e25" style="width: 100.0%; height: 100.0%;"><b>Shyamnagar</b><br><b>Energy Reliability Score:</b> 0.779<br><b>Overall MEPI:</b> 0.834</div>`)[0];
+                popup_1770a17cf9bfc31ce08c03d36f0ebb5d.setContent(html_4488e87951efe6515ca14b0c5e030e25);
+            
+        
+
+        circle_marker_bb3e67d5c17ff7bd56bf0398bfaafeab.bindPopup(popup_1770a17cf9bfc31ce08c03d36f0ebb5d)
+        ;
+
+        
+    
+    
+            circle_marker_bb3e67d5c17ff7bd56bf0398bfaafeab.bindTooltip(
+                `<div>
+                     Shyamnagar | Reliability: 0.779
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f5d0e80ae5b898a2c63e7698efe4647d = L.circleMarker(
+                [25.07, 91.4],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdb271", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_e936d8b60a49e798388751eb9fa4d8f9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_27d524ad26b673d36357f045b19fb631 = $(`<div id="html_27d524ad26b673d36357f045b19fb631" style="width: 100.0%; height: 100.0%;"><b>Sunamganj Sadar</b><br><b>Energy Reliability Score:</b> 0.360<br><b>Overall MEPI:</b> 0.485</div>`)[0];
+                popup_e936d8b60a49e798388751eb9fa4d8f9.setContent(html_27d524ad26b673d36357f045b19fb631);
+            
+        
+
+        circle_marker_f5d0e80ae5b898a2c63e7698efe4647d.bindPopup(popup_e936d8b60a49e798388751eb9fa4d8f9)
+        ;
+
+        
+    
+    
+            circle_marker_f5d0e80ae5b898a2c63e7698efe4647d.bindTooltip(
+                `<div>
+                     Sunamganj Sadar | Reliability: 0.360
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_024b94a927b31c488f3a8e2918e5822b = L.circleMarker(
+                [25.1, 91.2],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd9c51", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_3c0060aaa2ca6f8b1b33b89a4918d97d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_371fea7b9a1d8544ffb4d3daea9cbd58 = $(`<div id="html_371fea7b9a1d8544ffb4d3daea9cbd58" style="width: 100.0%; height: 100.0%;"><b>Tahirpur</b><br><b>Energy Reliability Score:</b> 0.443<br><b>Overall MEPI:</b> 0.558</div>`)[0];
+                popup_3c0060aaa2ca6f8b1b33b89a4918d97d.setContent(html_371fea7b9a1d8544ffb4d3daea9cbd58);
+            
+        
+
+        circle_marker_024b94a927b31c488f3a8e2918e5822b.bindPopup(popup_3c0060aaa2ca6f8b1b33b89a4918d97d)
+        ;
+
+        
+    
+    
+            circle_marker_024b94a927b31c488f3a8e2918e5822b.bindTooltip(
+                `<div>
+                     Tahirpur | Reliability: 0.443
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c57530496840fd5f4d3e81352e3e3ad = L.circleMarker(
+                [25.16, 89.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#df5106", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_2068277181148d1ed25ff8e40d3fcf54 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c1c55fd12fbb9e267adc9e221ea0715d = $(`<div id="html_c1c55fd12fbb9e267adc9e221ea0715d" style="width: 100.0%; height: 100.0%;"><b>Fulchhari</b><br><b>Energy Reliability Score:</b> 0.716<br><b>Overall MEPI:</b> 0.781</div>`)[0];
+                popup_2068277181148d1ed25ff8e40d3fcf54.setContent(html_c1c55fd12fbb9e267adc9e221ea0715d);
+            
+        
+
+        circle_marker_7c57530496840fd5f4d3e81352e3e3ad.bindPopup(popup_2068277181148d1ed25ff8e40d3fcf54)
+        ;
+
+        
+    
+    
+            circle_marker_7c57530496840fd5f4d3e81352e3e3ad.bindTooltip(
+                `<div>
+                     Fulchhari | Reliability: 0.716
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_838460d2f69d02698b4fdcb1a0d739c4 = L.circleMarker(
+                [25.09, 89.85],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f16813", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_d73eb7012fdd2f077cce515c2ddf213f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b9f23482920ae0b8d6a6a835cfed69fd = $(`<div id="html_b9f23482920ae0b8d6a6a835cfed69fd" style="width: 100.0%; height: 100.0%;"><b>Saghata</b><br><b>Energy Reliability Score:</b> 0.627<br><b>Overall MEPI:</b> 0.704</div>`)[0];
+                popup_d73eb7012fdd2f077cce515c2ddf213f.setContent(html_b9f23482920ae0b8d6a6a835cfed69fd);
+            
+        
+
+        circle_marker_838460d2f69d02698b4fdcb1a0d739c4.bindPopup(popup_d73eb7012fdd2f077cce515c2ddf213f)
+        ;
+
+        
+    
+    
+            circle_marker_838460d2f69d02698b4fdcb1a0d739c4.bindTooltip(
+                `<div>
+                     Saghata | Reliability: 0.627
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ef45dc6e66f16600f51c88e5b90b1233 = L.circleMarker(
+                [24.37, 88.6],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff3e6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_d5b4a1013e3a2c4fc179d2bb41f5e12b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8da5b45c562e301fb433239423b6883a = $(`<div id="html_8da5b45c562e301fb433239423b6883a" style="width: 100.0%; height: 100.0%;"><b>Rajshahi Sadar</b><br><b>Energy Reliability Score:</b> 0.020<br><b>Overall MEPI:</b> 0.029</div>`)[0];
+                popup_d5b4a1013e3a2c4fc179d2bb41f5e12b.setContent(html_8da5b45c562e301fb433239423b6883a);
+            
+        
+
+        circle_marker_ef45dc6e66f16600f51c88e5b90b1233.bindPopup(popup_d5b4a1013e3a2c4fc179d2bb41f5e12b)
+        ;
+
+        
+    
+    
+            circle_marker_ef45dc6e66f16600f51c88e5b90b1233.bindTooltip(
+                `<div>
+                     Rajshahi Sadar | Reliability: 0.020
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8281453a6a8777bab0ce277c91fe4369 = L.circleMarker(
+                [24.52, 88.42],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee0c1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_c5e9bad673b7cd61abab85015cb04250 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6170d249167a46d7a5c3efa5e7f200ae = $(`<div id="html_6170d249167a46d7a5c3efa5e7f200ae" style="width: 100.0%; height: 100.0%;"><b>Godagari</b><br><b>Energy Reliability Score:</b> 0.164<br><b>Overall MEPI:</b> 0.283</div>`)[0];
+                popup_c5e9bad673b7cd61abab85015cb04250.setContent(html_6170d249167a46d7a5c3efa5e7f200ae);
+            
+        
+
+        circle_marker_8281453a6a8777bab0ce277c91fe4369.bindPopup(popup_c5e9bad673b7cd61abab85015cb04250)
+        ;
+
+        
+    
+    
+            circle_marker_8281453a6a8777bab0ce277c91fe4369.bindTooltip(
+                `<div>
+                     Godagari | Reliability: 0.164
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_993e4639ebf10fe8343e3df81bb48811 = L.circleMarker(
+                [22.19, 92.22],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a43503", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_85c49f1357a29b3baaf365ef6517cf53 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4f6aeadc043a71c5ba6f10bf3ee45735 = $(`<div id="html_4f6aeadc043a71c5ba6f10bf3ee45735" style="width: 100.0%; height: 100.0%;"><b>Bandarban Sadar</b><br><b>Energy Reliability Score:</b> 0.880<br><b>Overall MEPI:</b> 0.911</div>`)[0];
+                popup_85c49f1357a29b3baaf365ef6517cf53.setContent(html_4f6aeadc043a71c5ba6f10bf3ee45735);
+            
+        
+
+        circle_marker_993e4639ebf10fe8343e3df81bb48811.bindPopup(popup_85c49f1357a29b3baaf365ef6517cf53)
+        ;
+
+        
+    
+    
+            circle_marker_993e4639ebf10fe8343e3df81bb48811.bindTooltip(
+                `<div>
+                     Bandarban Sadar | Reliability: 0.880
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_113f0d7abf61880bd727df8377e00685 = L.circleMarker(
+                [22.08, 92.28],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f2704", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_e758c5dd6f27db9f38020fb8bc127cb8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4790bdb47d6399803d99917f5bf7dcb2 = $(`<div id="html_4790bdb47d6399803d99917f5bf7dcb2" style="width: 100.0%; height: 100.0%;"><b>Rowangchhari</b><br><b>Energy Reliability Score:</b> 1.000<br><b>Overall MEPI:</b> 1.000</div>`)[0];
+                popup_e758c5dd6f27db9f38020fb8bc127cb8.setContent(html_4790bdb47d6399803d99917f5bf7dcb2);
+            
+        
+
+        circle_marker_113f0d7abf61880bd727df8377e00685.bindPopup(popup_e758c5dd6f27db9f38020fb8bc127cb8)
+        ;
+
+        
+    
+    
+            circle_marker_113f0d7abf61880bd727df8377e00685.bindTooltip(
+                `<div>
+                     Rowangchhari | Reliability: 1.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8d2b470791ee6b51e0b7b0eb2f180f0 = L.circleMarker(
+                [22.7, 90.37],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feead6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_af6d80671a254b2e527e3474202cb2ac = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f9c1385e731ede19d7810d7e6f0309b3 = $(`<div id="html_f9c1385e731ede19d7810d7e6f0309b3" style="width: 100.0%; height: 100.0%;"><b>Barishal Sadar</b><br><b>Energy Reliability Score:</b> 0.093<br><b>Overall MEPI:</b> 0.154</div>`)[0];
+                popup_af6d80671a254b2e527e3474202cb2ac.setContent(html_f9c1385e731ede19d7810d7e6f0309b3);
+            
+        
+
+        circle_marker_a8d2b470791ee6b51e0b7b0eb2f180f0.bindPopup(popup_af6d80671a254b2e527e3474202cb2ac)
+        ;
+
+        
+    
+    
+            circle_marker_a8d2b470791ee6b51e0b7b0eb2f180f0.bindTooltip(
+                `<div>
+                     Barishal Sadar | Reliability: 0.093
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41dcc3068ef9a4ad615c0ac354a2beae = L.circleMarker(
+                [22.61, 90.51],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdbd83", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_ee80b1ad534e27633371f132dfea41f3);
+        
+    
+        var popup_1d5375346a0d308fbd7c6a337160c4e9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1e2c86e70467f2c757bdfeba16c5285b = $(`<div id="html_1e2c86e70467f2c757bdfeba16c5285b" style="width: 100.0%; height: 100.0%;"><b>Muladi</b><br><b>Energy Reliability Score:</b> 0.323<br><b>Overall MEPI:</b> 0.442</div>`)[0];
+                popup_1d5375346a0d308fbd7c6a337160c4e9.setContent(html_1e2c86e70467f2c757bdfeba16c5285b);
+            
+        
+
+        circle_marker_41dcc3068ef9a4ad615c0ac354a2beae.bindPopup(popup_1d5375346a0d308fbd7c6a337160c4e9)
+        ;
+
+        
+    
+    
+            circle_marker_41dcc3068ef9a4ad615c0ac354a2beae.bindTooltip(
+                `<div>
+                     Muladi | Reliability: 0.323
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_2b2db5b9a1fba741ce4818dc23c323fc = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_2a2dabb0e3a7db17ef9fd3e686499638 = L.circleMarker(
+                [20.86, 92.3],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5d3897", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_8c74e18dac8c1d663919e7a22db7a173 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6b6bd45eedc04346f6d03e2c677038ed = $(`<div id="html_6b6bd45eedc04346f6d03e2c677038ed" style="width: 100.0%; height: 100.0%;"><b>Teknaf</b><br><b>Energy Adequacy Score:</b> 0.824<br><b>Overall MEPI:</b> 0.749</div>`)[0];
+                popup_8c74e18dac8c1d663919e7a22db7a173.setContent(html_6b6bd45eedc04346f6d03e2c677038ed);
+            
+        
+
+        circle_marker_2a2dabb0e3a7db17ef9fd3e686499638.bindPopup(popup_8c74e18dac8c1d663919e7a22db7a173)
+        ;
+
+        
+    
+    
+            circle_marker_2a2dabb0e3a7db17ef9fd3e686499638.bindTooltip(
+                `<div>
+                     Teknaf | Adequacy: 0.824
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_abcdbfe44fe1f4cc4065ea7573f364e7 = L.circleMarker(
+                [21.22, 92.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#684da1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_1debc39822dd7b457eed489b71812b53 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9601093aea3119b76103661ff8486958 = $(`<div id="html_9601093aea3119b76103661ff8486958" style="width: 100.0%; height: 100.0%;"><b>Ukhia</b><br><b>Energy Adequacy Score:</b> 0.760<br><b>Overall MEPI:</b> 0.666</div>`)[0];
+                popup_1debc39822dd7b457eed489b71812b53.setContent(html_9601093aea3119b76103661ff8486958);
+            
+        
+
+        circle_marker_abcdbfe44fe1f4cc4065ea7573f364e7.bindPopup(popup_1debc39822dd7b457eed489b71812b53)
+        ;
+
+        
+    
+    
+            circle_marker_abcdbfe44fe1f4cc4065ea7573f364e7.bindTooltip(
+                `<div>
+                     Ukhia | Adequacy: 0.760
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4b6366c64993be3a383ac1c399ecce5 = L.circleMarker(
+                [22.49, 92.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a5a2cd", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_a8608aea0297d45cd771959b2a465e0e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1b79045883e458846940e5f0a33bd0ba = $(`<div id="html_1b79045883e458846940e5f0a33bd0ba" style="width: 100.0%; height: 100.0%;"><b>Rangunia</b><br><b>Energy Adequacy Score:</b> 0.471<br><b>Overall MEPI:</b> 0.367</div>`)[0];
+                popup_a8608aea0297d45cd771959b2a465e0e.setContent(html_1b79045883e458846940e5f0a33bd0ba);
+            
+        
+
+        circle_marker_e4b6366c64993be3a383ac1c399ecce5.bindPopup(popup_a8608aea0297d45cd771959b2a465e0e)
+        ;
+
+        
+    
+    
+            circle_marker_e4b6366c64993be3a383ac1c399ecce5.bindTooltip(
+                `<div>
+                     Rangunia | Adequacy: 0.471
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c68a397216f2c06cf1b42dbddb449088 = L.circleMarker(
+                [22.3, 91.98],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2b2d5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_fe2a100d4ffdbe697bd8d9d56099e378 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c7f2241e68429929b632cb0f5219bf36 = $(`<div id="html_c7f2241e68429929b632cb0f5219bf36" style="width: 100.0%; height: 100.0%;"><b>Patiya</b><br><b>Energy Adequacy Score:</b> 0.418<br><b>Overall MEPI:</b> 0.318</div>`)[0];
+                popup_fe2a100d4ffdbe697bd8d9d56099e378.setContent(html_c7f2241e68429929b632cb0f5219bf36);
+            
+        
+
+        circle_marker_c68a397216f2c06cf1b42dbddb449088.bindPopup(popup_fe2a100d4ffdbe697bd8d9d56099e378)
+        ;
+
+        
+    
+    
+            circle_marker_c68a397216f2c06cf1b42dbddb449088.bindTooltip(
+                `<div>
+                     Patiya | Adequacy: 0.418
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86682d346c2dab578d3977d32b9974d4 = L.circleMarker(
+                [23.59, 90.14],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dadaeb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_3600b661bd8d5d924218814f46ff1c5c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5fdeb0c7fe627693160b43f5ae072ed7 = $(`<div id="html_5fdeb0c7fe627693160b43f5ae072ed7" style="width: 100.0%; height: 100.0%;"><b>Dohar</b><br><b>Energy Adequacy Score:</b> 0.249<br><b>Overall MEPI:</b> 0.183</div>`)[0];
+                popup_3600b661bd8d5d924218814f46ff1c5c.setContent(html_5fdeb0c7fe627693160b43f5ae072ed7);
+            
+        
+
+        circle_marker_86682d346c2dab578d3977d32b9974d4.bindPopup(popup_3600b661bd8d5d924218814f46ff1c5c)
+        ;
+
+        
+    
+    
+            circle_marker_86682d346c2dab578d3977d32b9974d4.bindTooltip(
+                `<div>
+                     Dohar | Adequacy: 0.249
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0663ea7bdce1011ab3b2d2e050c500e = L.circleMarker(
+                [23.61, 90.02],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e6e5f1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_c4973bdae2d446c65d56eba0f5332824 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9bdd9808c90a2bc6b1a5114dc434e6f3 = $(`<div id="html_9bdd9808c90a2bc6b1a5114dc434e6f3" style="width: 100.0%; height: 100.0%;"><b>Nawabganj</b><br><b>Energy Adequacy Score:</b> 0.181<br><b>Overall MEPI:</b> 0.128</div>`)[0];
+                popup_c4973bdae2d446c65d56eba0f5332824.setContent(html_9bdd9808c90a2bc6b1a5114dc434e6f3);
+            
+        
+
+        circle_marker_e0663ea7bdce1011ab3b2d2e050c500e.bindPopup(popup_c4973bdae2d446c65d56eba0f5332824)
+        ;
+
+        
+    
+    
+            circle_marker_e0663ea7bdce1011ab3b2d2e050c500e.bindTooltip(
+                `<div>
+                     Nawabganj | Adequacy: 0.181
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_540f58731c17725deb5e4f4671630b22 = L.circleMarker(
+                [23.84, 90.27],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcfbfd", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_08701897bb735cb62802f74080851678 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f98b67b3159beea4f260dfa09d58e699 = $(`<div id="html_f98b67b3159beea4f260dfa09d58e699" style="width: 100.0%; height: 100.0%;"><b>Savar</b><br><b>Energy Adequacy Score:</b> 0.000<br><b>Overall MEPI:</b> 0.000</div>`)[0];
+                popup_08701897bb735cb62802f74080851678.setContent(html_f98b67b3159beea4f260dfa09d58e699);
+            
+        
+
+        circle_marker_540f58731c17725deb5e4f4671630b22.bindPopup(popup_08701897bb735cb62802f74080851678)
+        ;
+
+        
+    
+    
+            circle_marker_540f58731c17725deb5e4f4671630b22.bindTooltip(
+                `<div>
+                     Savar | Adequacy: 0.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45195e291dec7e8840439dd9b665243f = L.circleMarker(
+                [23.71, 90.38],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f5f3f8", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_4737ca0573b1aba9d844f666e694f7da = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4a2fd28463aaa29400b7b75203fd2175 = $(`<div id="html_4a2fd28463aaa29400b7b75203fd2175" style="width: 100.0%; height: 100.0%;"><b>Keraniganj</b><br><b>Energy Adequacy Score:</b> 0.071<br><b>Overall MEPI:</b> 0.058</div>`)[0];
+                popup_4737ca0573b1aba9d844f666e694f7da.setContent(html_4a2fd28463aaa29400b7b75203fd2175);
+            
+        
+
+        circle_marker_45195e291dec7e8840439dd9b665243f.bindPopup(popup_4737ca0573b1aba9d844f666e694f7da)
+        ;
+
+        
+    
+    
+            circle_marker_45195e291dec7e8840439dd9b665243f.bindTooltip(
+                `<div>
+                     Keraniganj | Adequacy: 0.071
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53e04e9fb5aeeeaed0b0ed4702403ae9 = L.circleMarker(
+                [22.41, 89.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7261ab", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_ac368f00c1baab0dc70f5f6f779f967d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_bc27dff0b6077b38cf6110442d7525c7 = $(`<div id="html_bc27dff0b6077b38cf6110442d7525c7" style="width: 100.0%; height: 100.0%;"><b>Kaliganj</b><br><b>Energy Adequacy Score:</b> 0.703<br><b>Overall MEPI:</b> 0.609</div>`)[0];
+                popup_ac368f00c1baab0dc70f5f6f779f967d.setContent(html_bc27dff0b6077b38cf6110442d7525c7);
+            
+        
+
+        circle_marker_53e04e9fb5aeeeaed0b0ed4702403ae9.bindPopup(popup_ac368f00c1baab0dc70f5f6f779f967d)
+        ;
+
+        
+    
+    
+            circle_marker_53e04e9fb5aeeeaed0b0ed4702403ae9.bindTooltip(
+                `<div>
+                     Kaliganj | Adequacy: 0.703
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da8f3b9e44a5ca3b8121b1a37ad6adb3 = L.circleMarker(
+                [22.15, 89.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#51228d", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_43382c49b098b745a12d3d2cfe64618d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d294f494210011be6c1ac362647392d0 = $(`<div id="html_d294f494210011be6c1ac362647392d0" style="width: 100.0%; height: 100.0%;"><b>Shyamnagar</b><br><b>Energy Adequacy Score:</b> 0.890<br><b>Overall MEPI:</b> 0.834</div>`)[0];
+                popup_43382c49b098b745a12d3d2cfe64618d.setContent(html_d294f494210011be6c1ac362647392d0);
+            
+        
+
+        circle_marker_da8f3b9e44a5ca3b8121b1a37ad6adb3.bindPopup(popup_43382c49b098b745a12d3d2cfe64618d)
+        ;
+
+        
+    
+    
+            circle_marker_da8f3b9e44a5ca3b8121b1a37ad6adb3.bindTooltip(
+                `<div>
+                     Shyamnagar | Adequacy: 0.890
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1aab17560b7cbe8e442693123e58072a = L.circleMarker(
+                [25.07, 91.4],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8986be", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_cd3dd7c26633c73d0b2ac6139fd417d2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_876e9c0d952f3a4845522d57b7f49ba6 = $(`<div id="html_876e9c0d952f3a4845522d57b7f49ba6" style="width: 100.0%; height: 100.0%;"><b>Sunamganj Sadar</b><br><b>Energy Adequacy Score:</b> 0.587<br><b>Overall MEPI:</b> 0.485</div>`)[0];
+                popup_cd3dd7c26633c73d0b2ac6139fd417d2.setContent(html_876e9c0d952f3a4845522d57b7f49ba6);
+            
+        
+
+        circle_marker_1aab17560b7cbe8e442693123e58072a.bindPopup(popup_cd3dd7c26633c73d0b2ac6139fd417d2)
+        ;
+
+        
+    
+    
+            circle_marker_1aab17560b7cbe8e442693123e58072a.bindTooltip(
+                `<div>
+                     Sunamganj Sadar | Adequacy: 0.587
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_726ae2302a12138a35587206eac03519 = L.circleMarker(
+                [25.1, 91.2],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c75b6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_9af195c677eb2519b14b4e32521b43b9 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a7855f98c7a4c490d41813019e069574 = $(`<div id="html_a7855f98c7a4c490d41813019e069574" style="width: 100.0%; height: 100.0%;"><b>Tahirpur</b><br><b>Energy Adequacy Score:</b> 0.647<br><b>Overall MEPI:</b> 0.558</div>`)[0];
+                popup_9af195c677eb2519b14b4e32521b43b9.setContent(html_a7855f98c7a4c490d41813019e069574);
+            
+        
+
+        circle_marker_726ae2302a12138a35587206eac03519.bindPopup(popup_9af195c677eb2519b14b4e32521b43b9)
+        ;
+
+        
+    
+    
+            circle_marker_726ae2302a12138a35587206eac03519.bindTooltip(
+                `<div>
+                     Tahirpur | Adequacy: 0.647
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_027e46901c5cc7d5d6c90d17c57c9f1c = L.circleMarker(
+                [25.16, 89.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#582e92", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_1f5632ba6a0bff059f63c70400fc00aa = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1c91dc73c49cb4b274d71359bcad7177 = $(`<div id="html_1c91dc73c49cb4b274d71359bcad7177" style="width: 100.0%; height: 100.0%;"><b>Fulchhari</b><br><b>Energy Adequacy Score:</b> 0.854<br><b>Overall MEPI:</b> 0.781</div>`)[0];
+                popup_1f5632ba6a0bff059f63c70400fc00aa.setContent(html_1c91dc73c49cb4b274d71359bcad7177);
+            
+        
+
+        circle_marker_027e46901c5cc7d5d6c90d17c57c9f1c.bindPopup(popup_1f5632ba6a0bff059f63c70400fc00aa)
+        ;
+
+        
+    
+    
+            circle_marker_027e46901c5cc7d5d6c90d17c57c9f1c.bindTooltip(
+                `<div>
+                     Fulchhari | Adequacy: 0.854
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b49d55bea0538c78d12b5146d57ea4cd = L.circleMarker(
+                [25.09, 89.85],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#64459e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_0bf5e70f6b4c1e758a1ac84f11bc7f98 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_eea50eaf6d2a2a34e4e9824acb942cd6 = $(`<div id="html_eea50eaf6d2a2a34e4e9824acb942cd6" style="width: 100.0%; height: 100.0%;"><b>Saghata</b><br><b>Energy Adequacy Score:</b> 0.784<br><b>Overall MEPI:</b> 0.704</div>`)[0];
+                popup_0bf5e70f6b4c1e758a1ac84f11bc7f98.setContent(html_eea50eaf6d2a2a34e4e9824acb942cd6);
+            
+        
+
+        circle_marker_b49d55bea0538c78d12b5146d57ea4cd.bindPopup(popup_0bf5e70f6b4c1e758a1ac84f11bc7f98)
+        ;
+
+        
+    
+    
+            circle_marker_b49d55bea0538c78d12b5146d57ea4cd.bindTooltip(
+                `<div>
+                     Saghata | Adequacy: 0.784
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0f2b7daea24ce0f3184b77b449d3008 = L.circleMarker(
+                [24.37, 88.6],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f9f7fb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_f2eb715ca498b9db1cee05aa16232e68 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9b239fce76d31cbbe8e0152e48f7ff6e = $(`<div id="html_9b239fce76d31cbbe8e0152e48f7ff6e" style="width: 100.0%; height: 100.0%;"><b>Rajshahi Sadar</b><br><b>Energy Adequacy Score:</b> 0.031<br><b>Overall MEPI:</b> 0.029</div>`)[0];
+                popup_f2eb715ca498b9db1cee05aa16232e68.setContent(html_9b239fce76d31cbbe8e0152e48f7ff6e);
+            
+        
+
+        circle_marker_b0f2b7daea24ce0f3184b77b449d3008.bindPopup(popup_f2eb715ca498b9db1cee05aa16232e68)
+        ;
+
+        
+    
+    
+            circle_marker_b0f2b7daea24ce0f3184b77b449d3008.bindTooltip(
+                `<div>
+                     Rajshahi Sadar | Adequacy: 0.031
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9e00cfc0de56a2d2e7a147b2ccf554a = L.circleMarker(
+                [24.52, 88.42],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bebedd", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_2cbb626872a3c4ab7c026bffc029b16e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ea194ac8e449accedf8c7198e5001a0e = $(`<div id="html_ea194ac8e449accedf8c7198e5001a0e" style="width: 100.0%; height: 100.0%;"><b>Godagari</b><br><b>Energy Adequacy Score:</b> 0.370<br><b>Overall MEPI:</b> 0.283</div>`)[0];
+                popup_2cbb626872a3c4ab7c026bffc029b16e.setContent(html_ea194ac8e449accedf8c7198e5001a0e);
+            
+        
+
+        circle_marker_b9e00cfc0de56a2d2e7a147b2ccf554a.bindPopup(popup_2cbb626872a3c4ab7c026bffc029b16e)
+        ;
+
+        
+    
+    
+            circle_marker_b9e00cfc0de56a2d2e7a147b2ccf554a.bindTooltip(
+                `<div>
+                     Godagari | Adequacy: 0.370
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5fba64a80215947427a9406aa8b6b352 = L.circleMarker(
+                [22.19, 92.22],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#481185", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_cc22d586a8e8af0e5718b2abbe8a4c9b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a8356af87c8bfbb80b994c17d35fa0b7 = $(`<div id="html_a8356af87c8bfbb80b994c17d35fa0b7" style="width: 100.0%; height: 100.0%;"><b>Bandarban Sadar</b><br><b>Energy Adequacy Score:</b> 0.945<br><b>Overall MEPI:</b> 0.911</div>`)[0];
+                popup_cc22d586a8e8af0e5718b2abbe8a4c9b.setContent(html_a8356af87c8bfbb80b994c17d35fa0b7);
+            
+        
+
+        circle_marker_5fba64a80215947427a9406aa8b6b352.bindPopup(popup_cc22d586a8e8af0e5718b2abbe8a4c9b)
+        ;
+
+        
+    
+    
+            circle_marker_5fba64a80215947427a9406aa8b6b352.bindTooltip(
+                `<div>
+                     Bandarban Sadar | Adequacy: 0.945
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_707b214d370a229c57495879d0df6805 = L.circleMarker(
+                [22.08, 92.28],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3f007d", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_31af08d34e7251fcdc5eb4c6e01fcc75 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_78680e4a0ed9a9341f6a311dcbaa50b3 = $(`<div id="html_78680e4a0ed9a9341f6a311dcbaa50b3" style="width: 100.0%; height: 100.0%;"><b>Rowangchhari</b><br><b>Energy Adequacy Score:</b> 1.000<br><b>Overall MEPI:</b> 1.000</div>`)[0];
+                popup_31af08d34e7251fcdc5eb4c6e01fcc75.setContent(html_78680e4a0ed9a9341f6a311dcbaa50b3);
+            
+        
+
+        circle_marker_707b214d370a229c57495879d0df6805.bindPopup(popup_31af08d34e7251fcdc5eb4c6e01fcc75)
+        ;
+
+        
+    
+    
+            circle_marker_707b214d370a229c57495879d0df6805.bindTooltip(
+                `<div>
+                     Rowangchhari | Adequacy: 1.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d402f94050a41635d567906e20687b7 = L.circleMarker(
+                [22.7, 90.37],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e0e0ee", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_457c0edd0abbd06fee869694bc96e37a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_73362df62a697db514e1c8887776b79a = $(`<div id="html_73362df62a697db514e1c8887776b79a" style="width: 100.0%; height: 100.0%;"><b>Barishal Sadar</b><br><b>Energy Adequacy Score:</b> 0.213<br><b>Overall MEPI:</b> 0.154</div>`)[0];
+                popup_457c0edd0abbd06fee869694bc96e37a.setContent(html_73362df62a697db514e1c8887776b79a);
+            
+        
+
+        circle_marker_3d402f94050a41635d567906e20687b7.bindPopup(popup_457c0edd0abbd06fee869694bc96e37a)
+        ;
+
+        
+    
+    
+            circle_marker_3d402f94050a41635d567906e20687b7.bindTooltip(
+                `<div>
+                     Barishal Sadar | Adequacy: 0.213
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3a34fb286b554dd34d5cc0842253e7b = L.circleMarker(
+                [22.61, 90.51],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9591c4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_2b2db5b9a1fba741ce4818dc23c323fc);
+        
+    
+        var popup_0451770f46e51240d8c0476f979cf63c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f0d6db84df2bde88e3281d89344c0290 = $(`<div id="html_f0d6db84df2bde88e3281d89344c0290" style="width: 100.0%; height: 100.0%;"><b>Muladi</b><br><b>Energy Adequacy Score:</b> 0.539<br><b>Overall MEPI:</b> 0.442</div>`)[0];
+                popup_0451770f46e51240d8c0476f979cf63c.setContent(html_f0d6db84df2bde88e3281d89344c0290);
+            
+        
+
+        circle_marker_b3a34fb286b554dd34d5cc0842253e7b.bindPopup(popup_0451770f46e51240d8c0476f979cf63c)
+        ;
+
+        
+    
+    
+            circle_marker_b3a34fb286b554dd34d5cc0842253e7b.bindTooltip(
+                `<div>
+                     Muladi | Adequacy: 0.539
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_625507aacd45d5de30348efbb7020eea = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_ceb031410e5b35c3c3a97a00f3594721 = L.circleMarker(
+                [20.86, 92.3],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2070b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_163366aaba277d628cf5b1870d6bb1b2 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a8b2f6922ebc3eeaed5b6f571251ac97 = $(`<div id="html_a8b2f6922ebc3eeaed5b6f571251ac97" style="width: 100.0%; height: 100.0%;"><b>Teknaf</b><br><b>Energy Quality Score:</b> 0.750<br><b>Overall MEPI:</b> 0.749</div>`)[0];
+                popup_163366aaba277d628cf5b1870d6bb1b2.setContent(html_a8b2f6922ebc3eeaed5b6f571251ac97);
+            
+        
+
+        circle_marker_ceb031410e5b35c3c3a97a00f3594721.bindPopup(popup_163366aaba277d628cf5b1870d6bb1b2)
+        ;
+
+        
+    
+    
+            circle_marker_ceb031410e5b35c3c3a97a00f3594721.bindTooltip(
+                `<div>
+                     Teknaf | Quality: 0.750
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1bc33d25250df0811564c7c3f4709ea7 = L.circleMarker(
+                [21.22, 92.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3888c1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_fcdfcf44cb5e9d86c4a4764003b19852 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_830f568a5480b0ef5f9493d5dcb56f73 = $(`<div id="html_830f568a5480b0ef5f9493d5dcb56f73" style="width: 100.0%; height: 100.0%;"><b>Ukhia</b><br><b>Energy Quality Score:</b> 0.660<br><b>Overall MEPI:</b> 0.666</div>`)[0];
+                popup_fcdfcf44cb5e9d86c4a4764003b19852.setContent(html_830f568a5480b0ef5f9493d5dcb56f73);
+            
+        
+
+        circle_marker_1bc33d25250df0811564c7c3f4709ea7.bindPopup(popup_fcdfcf44cb5e9d86c4a4764003b19852)
+        ;
+
+        
+    
+    
+            circle_marker_1bc33d25250df0811564c7c3f4709ea7.bindTooltip(
+                `<div>
+                     Ukhia | Quality: 0.660
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_729220b536a84f35c6cf7cb68c09d390 = L.circleMarker(
+                [22.49, 92.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a3cce3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_7fac509b805aaefd07086b69130f3bf6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_814f8fcef72f27054bcd8bf03632e7a0 = $(`<div id="html_814f8fcef72f27054bcd8bf03632e7a0" style="width: 100.0%; height: 100.0%;"><b>Rangunia</b><br><b>Energy Quality Score:</b> 0.361<br><b>Overall MEPI:</b> 0.367</div>`)[0];
+                popup_7fac509b805aaefd07086b69130f3bf6.setContent(html_814f8fcef72f27054bcd8bf03632e7a0);
+            
+        
+
+        circle_marker_729220b536a84f35c6cf7cb68c09d390.bindPopup(popup_7fac509b805aaefd07086b69130f3bf6)
+        ;
+
+        
+    
+    
+            circle_marker_729220b536a84f35c6cf7cb68c09d390.bindTooltip(
+                `<div>
+                     Rangunia | Quality: 0.361
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20afd43b4786b242ec866f68827567ce = L.circleMarker(
+                [22.3, 91.98],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b3d3e8", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_1dfdada92490fbc7938f601b75f46272 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0fbfd777cea246ed08079df97abc65ea = $(`<div id="html_0fbfd777cea246ed08079df97abc65ea" style="width: 100.0%; height: 100.0%;"><b>Patiya</b><br><b>Energy Quality Score:</b> 0.310<br><b>Overall MEPI:</b> 0.318</div>`)[0];
+                popup_1dfdada92490fbc7938f601b75f46272.setContent(html_0fbfd777cea246ed08079df97abc65ea);
+            
+        
+
+        circle_marker_20afd43b4786b242ec866f68827567ce.bindPopup(popup_1dfdada92490fbc7938f601b75f46272)
+        ;
+
+        
+    
+    
+            circle_marker_20afd43b4786b242ec866f68827567ce.bindTooltip(
+                `<div>
+                     Patiya | Quality: 0.310
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75460d1b97de58b3ff304397e96aee1a = L.circleMarker(
+                [23.59, 90.14],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d5e5f4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_1f1cc0df70ba61f748d5c08c30c74643 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5c87542eced4f5c4b5314ac00767f276 = $(`<div id="html_5c87542eced4f5c4b5314ac00767f276" style="width: 100.0%; height: 100.0%;"><b>Dohar</b><br><b>Energy Quality Score:</b> 0.174<br><b>Overall MEPI:</b> 0.183</div>`)[0];
+                popup_1f1cc0df70ba61f748d5c08c30c74643.setContent(html_5c87542eced4f5c4b5314ac00767f276);
+            
+        
+
+        circle_marker_75460d1b97de58b3ff304397e96aee1a.bindPopup(popup_1f1cc0df70ba61f748d5c08c30c74643)
+        ;
+
+        
+    
+    
+            circle_marker_75460d1b97de58b3ff304397e96aee1a.bindTooltip(
+                `<div>
+                     Dohar | Quality: 0.174
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0db7acec95f875f9d5e6367cc017749a = L.circleMarker(
+                [23.61, 90.02],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e0ecf8", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_5208f0f7a516010cb9af9036bce801de = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a2861f60c2ecb6a512dc489833e3abe0 = $(`<div id="html_a2861f60c2ecb6a512dc489833e3abe0" style="width: 100.0%; height: 100.0%;"><b>Nawabganj</b><br><b>Energy Quality Score:</b> 0.113<br><b>Overall MEPI:</b> 0.128</div>`)[0];
+                popup_5208f0f7a516010cb9af9036bce801de.setContent(html_a2861f60c2ecb6a512dc489833e3abe0);
+            
+        
+
+        circle_marker_0db7acec95f875f9d5e6367cc017749a.bindPopup(popup_5208f0f7a516010cb9af9036bce801de)
+        ;
+
+        
+    
+    
+            circle_marker_0db7acec95f875f9d5e6367cc017749a.bindTooltip(
+                `<div>
+                     Nawabganj | Quality: 0.113
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7089d307ddd7972eebf4d68dc428358 = L.circleMarker(
+                [23.84, 90.27],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f7fbff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_5f870c681d0592b5153c986c74c33e89 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c33d39094e4ee120dc04f89af4202f0a = $(`<div id="html_c33d39094e4ee120dc04f89af4202f0a" style="width: 100.0%; height: 100.0%;"><b>Savar</b><br><b>Energy Quality Score:</b> 0.000<br><b>Overall MEPI:</b> 0.000</div>`)[0];
+                popup_5f870c681d0592b5153c986c74c33e89.setContent(html_c33d39094e4ee120dc04f89af4202f0a);
+            
+        
+
+        circle_marker_a7089d307ddd7972eebf4d68dc428358.bindPopup(popup_5f870c681d0592b5153c986c74c33e89)
+        ;
+
+        
+    
+    
+            circle_marker_a7089d307ddd7972eebf4d68dc428358.bindTooltip(
+                `<div>
+                     Savar | Quality: 0.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c7ac6e80a8bb6e8ba25d5e90cada2a7 = L.circleMarker(
+                [23.71, 90.38],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eaf3fb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_6ac9c5106c46e2bfa018fe7be1de0f67 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_24a0d8a7fa1a991fc052c9cff066b939 = $(`<div id="html_24a0d8a7fa1a991fc052c9cff066b939" style="width: 100.0%; height: 100.0%;"><b>Keraniganj</b><br><b>Energy Quality Score:</b> 0.064<br><b>Overall MEPI:</b> 0.058</div>`)[0];
+                popup_6ac9c5106c46e2bfa018fe7be1de0f67.setContent(html_24a0d8a7fa1a991fc052c9cff066b939);
+            
+        
+
+        circle_marker_9c7ac6e80a8bb6e8ba25d5e90cada2a7.bindPopup(popup_6ac9c5106c46e2bfa018fe7be1de0f67)
+        ;
+
+        
+    
+    
+            circle_marker_9c7ac6e80a8bb6e8ba25d5e90cada2a7.bindTooltip(
+                `<div>
+                     Keraniganj | Quality: 0.064
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de004b78b4bc6b2850253f7ba2f7b6a1 = L.circleMarker(
+                [22.41, 89.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4f9bcb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_e9afcc54c429b4a5b4aca69303744f7c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_343aed863499439e47ef268e6cfbe2c1 = $(`<div id="html_343aed863499439e47ef268e6cfbe2c1" style="width: 100.0%; height: 100.0%;"><b>Kaliganj</b><br><b>Energy Quality Score:</b> 0.586<br><b>Overall MEPI:</b> 0.609</div>`)[0];
+                popup_e9afcc54c429b4a5b4aca69303744f7c.setContent(html_343aed863499439e47ef268e6cfbe2c1);
+            
+        
+
+        circle_marker_de004b78b4bc6b2850253f7ba2f7b6a1.bindPopup(popup_e9afcc54c429b4a5b4aca69303744f7c)
+        ;
+
+        
+    
+    
+            circle_marker_de004b78b4bc6b2850253f7ba2f7b6a1.bindTooltip(
+                `<div>
+                     Kaliganj | Quality: 0.586
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c57e4e66f97ecbcc09b74cd247359cd = L.circleMarker(
+                [22.15, 89.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f5aa3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_3932cde0ac899df943fc6204faacf75c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0f264f37aafd045db9da231f2c757938 = $(`<div id="html_0f264f37aafd045db9da231f2c757938" style="width: 100.0%; height: 100.0%;"><b>Shyamnagar</b><br><b>Energy Quality Score:</b> 0.838<br><b>Overall MEPI:</b> 0.834</div>`)[0];
+                popup_3932cde0ac899df943fc6204faacf75c.setContent(html_0f264f37aafd045db9da231f2c757938);
+            
+        
+
+        circle_marker_3c57e4e66f97ecbcc09b74cd247359cd.bindPopup(popup_3932cde0ac899df943fc6204faacf75c)
+        ;
+
+        
+    
+    
+            circle_marker_3c57e4e66f97ecbcc09b74cd247359cd.bindTooltip(
+                `<div>
+                     Shyamnagar | Quality: 0.838
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d4c0daddb8b4a3f7cccc97590bccecc = L.circleMarker(
+                [25.07, 91.4],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#79b5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_2d5ac03285900046f50d6920bc8d7d8d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4c166f0123787cd4a93749c8f4031c00 = $(`<div id="html_4c166f0123787cd4a93749c8f4031c00" style="width: 100.0%; height: 100.0%;"><b>Sunamganj Sadar</b><br><b>Energy Quality Score:</b> 0.468<br><b>Overall MEPI:</b> 0.485</div>`)[0];
+                popup_2d5ac03285900046f50d6920bc8d7d8d.setContent(html_4c166f0123787cd4a93749c8f4031c00);
+            
+        
+
+        circle_marker_2d4c0daddb8b4a3f7cccc97590bccecc.bindPopup(popup_2d5ac03285900046f50d6920bc8d7d8d)
+        ;
+
+        
+    
+    
+            circle_marker_2d4c0daddb8b4a3f7cccc97590bccecc.bindTooltip(
+                `<div>
+                     Sunamganj Sadar | Quality: 0.468
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74a19e9d440892c38cb7a20b4c561db0 = L.circleMarker(
+                [25.1, 91.2],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5da5d1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_e9315656ee29ad9435e18b8584d5fa4d = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b5971befefa4c2db5c5a04bd9d2bea3a = $(`<div id="html_b5971befefa4c2db5c5a04bd9d2bea3a" style="width: 100.0%; height: 100.0%;"><b>Tahirpur</b><br><b>Energy Quality Score:</b> 0.540<br><b>Overall MEPI:</b> 0.558</div>`)[0];
+                popup_e9315656ee29ad9435e18b8584d5fa4d.setContent(html_b5971befefa4c2db5c5a04bd9d2bea3a);
+            
+        
+
+        circle_marker_74a19e9d440892c38cb7a20b4c561db0.bindPopup(popup_e9315656ee29ad9435e18b8584d5fa4d)
+        ;
+
+        
+    
+    
+            circle_marker_74a19e9d440892c38cb7a20b4c561db0.bindTooltip(
+                `<div>
+                     Tahirpur | Quality: 0.540
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9596a29c8fc523db9166d2da4d0a28f3 = L.circleMarker(
+                [25.16, 89.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1966ad", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_091a021537a240dfdf2d39344dc79c9e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7d35e561cc022cc207f1b9e204f16b8c = $(`<div id="html_7d35e561cc022cc207f1b9e204f16b8c" style="width: 100.0%; height: 100.0%;"><b>Fulchhari</b><br><b>Energy Quality Score:</b> 0.790<br><b>Overall MEPI:</b> 0.781</div>`)[0];
+                popup_091a021537a240dfdf2d39344dc79c9e.setContent(html_7d35e561cc022cc207f1b9e204f16b8c);
+            
+        
+
+        circle_marker_9596a29c8fc523db9166d2da4d0a28f3.bindPopup(popup_091a021537a240dfdf2d39344dc79c9e)
+        ;
+
+        
+    
+    
+            circle_marker_9596a29c8fc523db9166d2da4d0a28f3.bindTooltip(
+                `<div>
+                     Fulchhari | Quality: 0.790
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba593cdaae60d61435536b899cbae4e0 = L.circleMarker(
+                [25.09, 89.85],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e7ebc", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_64f27cf8b05e05a48384cedf8a6289fb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5166cd4e1e0cf86d2c1bdc4ccda27dc1 = $(`<div id="html_5166cd4e1e0cf86d2c1bdc4ccda27dc1" style="width: 100.0%; height: 100.0%;"><b>Saghata</b><br><b>Energy Quality Score:</b> 0.702<br><b>Overall MEPI:</b> 0.704</div>`)[0];
+                popup_64f27cf8b05e05a48384cedf8a6289fb.setContent(html_5166cd4e1e0cf86d2c1bdc4ccda27dc1);
+            
+        
+
+        circle_marker_ba593cdaae60d61435536b899cbae4e0.bindPopup(popup_64f27cf8b05e05a48384cedf8a6289fb)
+        ;
+
+        
+    
+    
+            circle_marker_ba593cdaae60d61435536b899cbae4e0.bindTooltip(
+                `<div>
+                     Saghata | Quality: 0.702
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e685010493733af38c3456f605aad3ad = L.circleMarker(
+                [24.37, 88.6],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2f7fd", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_0942203ee58e74b2f39649adf173107e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0c8773146b6cf6cb6699ab639c41c64c = $(`<div id="html_0c8773146b6cf6cb6699ab639c41c64c" style="width: 100.0%; height: 100.0%;"><b>Rajshahi Sadar</b><br><b>Energy Quality Score:</b> 0.028<br><b>Overall MEPI:</b> 0.029</div>`)[0];
+                popup_0942203ee58e74b2f39649adf173107e.setContent(html_0c8773146b6cf6cb6699ab639c41c64c);
+            
+        
+
+        circle_marker_e685010493733af38c3456f605aad3ad.bindPopup(popup_0942203ee58e74b2f39649adf173107e)
+        ;
+
+        
+    
+    
+            circle_marker_e685010493733af38c3456f605aad3ad.bindTooltip(
+                `<div>
+                     Rajshahi Sadar | Quality: 0.028
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c30062cfde20be39dda630d5a475a077 = L.circleMarker(
+                [24.52, 88.42],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bfd8ed", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_e8434cfc0634739d2ce9aa2e91c0cbaf = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c5a9cb776be87af6e6c1d97f41ac7d15 = $(`<div id="html_c5a9cb776be87af6e6c1d97f41ac7d15" style="width: 100.0%; height: 100.0%;"><b>Godagari</b><br><b>Energy Quality Score:</b> 0.272<br><b>Overall MEPI:</b> 0.283</div>`)[0];
+                popup_e8434cfc0634739d2ce9aa2e91c0cbaf.setContent(html_c5a9cb776be87af6e6c1d97f41ac7d15);
+            
+        
+
+        circle_marker_c30062cfde20be39dda630d5a475a077.bindPopup(popup_e8434cfc0634739d2ce9aa2e91c0cbaf)
+        ;
+
+        
+    
+    
+            circle_marker_c30062cfde20be39dda630d5a475a077.bindTooltip(
+                `<div>
+                     Godagari | Quality: 0.272
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca432555f59049ccd8a1094e7ab92502 = L.circleMarker(
+                [22.19, 92.22],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08468b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_0b3d79a0c4dd3dd8cb4eedb0ad82fd86 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_fd8d77739e0fe7109dbbe18dab6d6f14 = $(`<div id="html_fd8d77739e0fe7109dbbe18dab6d6f14" style="width: 100.0%; height: 100.0%;"><b>Bandarban Sadar</b><br><b>Energy Quality Score:</b> 0.916<br><b>Overall MEPI:</b> 0.911</div>`)[0];
+                popup_0b3d79a0c4dd3dd8cb4eedb0ad82fd86.setContent(html_fd8d77739e0fe7109dbbe18dab6d6f14);
+            
+        
+
+        circle_marker_ca432555f59049ccd8a1094e7ab92502.bindPopup(popup_0b3d79a0c4dd3dd8cb4eedb0ad82fd86)
+        ;
+
+        
+    
+    
+            circle_marker_ca432555f59049ccd8a1094e7ab92502.bindTooltip(
+                `<div>
+                     Bandarban Sadar | Quality: 0.916
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d436c474e00d2c26d214c6f49946bab = L.circleMarker(
+                [22.08, 92.28],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08306b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_dd5d2e9d8b5c1f784c43dd33f9090a2a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6b7f2c6a6948e3f59d1e27aa8742098b = $(`<div id="html_6b7f2c6a6948e3f59d1e27aa8742098b" style="width: 100.0%; height: 100.0%;"><b>Rowangchhari</b><br><b>Energy Quality Score:</b> 1.000<br><b>Overall MEPI:</b> 1.000</div>`)[0];
+                popup_dd5d2e9d8b5c1f784c43dd33f9090a2a.setContent(html_6b7f2c6a6948e3f59d1e27aa8742098b);
+            
+        
+
+        circle_marker_8d436c474e00d2c26d214c6f49946bab.bindPopup(popup_dd5d2e9d8b5c1f784c43dd33f9090a2a)
+        ;
+
+        
+    
+    
+            circle_marker_8d436c474e00d2c26d214c6f49946bab.bindTooltip(
+                `<div>
+                     Rowangchhari | Quality: 1.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2d8fa391a42f3c405a43749bbb44baf = L.circleMarker(
+                [22.7, 90.37],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dbe9f6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_2771f4a3ede6b1cb001b37a861785cc6 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_e693779eb092a53f2c35cba81fa58815 = $(`<div id="html_e693779eb092a53f2c35cba81fa58815" style="width: 100.0%; height: 100.0%;"><b>Barishal Sadar</b><br><b>Energy Quality Score:</b> 0.144<br><b>Overall MEPI:</b> 0.154</div>`)[0];
+                popup_2771f4a3ede6b1cb001b37a861785cc6.setContent(html_e693779eb092a53f2c35cba81fa58815);
+            
+        
+
+        circle_marker_e2d8fa391a42f3c405a43749bbb44baf.bindPopup(popup_2771f4a3ede6b1cb001b37a861785cc6)
+        ;
+
+        
+    
+    
+            circle_marker_e2d8fa391a42f3c405a43749bbb44baf.bindTooltip(
+                `<div>
+                     Barishal Sadar | Quality: 0.144
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_83dcc9804a4013a447dc9c7cde7da4b9 = L.circleMarker(
+                [22.61, 90.51],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8abfdd", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_625507aacd45d5de30348efbb7020eea);
+        
+    
+        var popup_9bbd90ec1887036efc27740514a238e8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1b7e4f1c19f2c7140b6179ac4f617896 = $(`<div id="html_1b7e4f1c19f2c7140b6179ac4f617896" style="width: 100.0%; height: 100.0%;"><b>Muladi</b><br><b>Energy Quality Score:</b> 0.425<br><b>Overall MEPI:</b> 0.442</div>`)[0];
+                popup_9bbd90ec1887036efc27740514a238e8.setContent(html_1b7e4f1c19f2c7140b6179ac4f617896);
+            
+        
+
+        circle_marker_83dcc9804a4013a447dc9c7cde7da4b9.bindPopup(popup_9bbd90ec1887036efc27740514a238e8)
+        ;
+
+        
+    
+    
+            circle_marker_83dcc9804a4013a447dc9c7cde7da4b9.bindTooltip(
+                `<div>
+                     Muladi | Quality: 0.425
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_7dff459443e731c693a65d4b207756fd = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_c06ffeefa1d75b5ba36e72b298f48c05 = L.circleMarker(
+                [20.86, 92.3],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ed2e21", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_c72c07b6fa89bf0265514f615dedc313 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7a4d4d1bc69fd6e9410e6070aa58e170 = $(`<div id="html_7a4d4d1bc69fd6e9410e6070aa58e170" style="width: 100.0%; height: 100.0%;"><b>Teknaf</b><br><b>Energy Affordability Score:</b> 0.703<br><b>Overall MEPI:</b> 0.749</div>`)[0];
+                popup_c72c07b6fa89bf0265514f615dedc313.setContent(html_7a4d4d1bc69fd6e9410e6070aa58e170);
+            
+        
+
+        circle_marker_c06ffeefa1d75b5ba36e72b298f48c05.bindPopup(popup_c72c07b6fa89bf0265514f615dedc313)
+        ;
+
+        
+    
+    
+            circle_marker_c06ffeefa1d75b5ba36e72b298f48c05.bindTooltip(
+                `<div>
+                     Teknaf | Affordability: 0.703
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15948bdfa6f37465db3b0e3208374a66 = L.circleMarker(
+                [21.22, 92.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc552c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_3485e91795e6dbdef64f7a85aed6b555 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d84be79f706b852d26c4fb2967d3489a = $(`<div id="html_d84be79f706b852d26c4fb2967d3489a" style="width: 100.0%; height: 100.0%;"><b>Ukhia</b><br><b>Energy Affordability Score:</b> 0.612<br><b>Overall MEPI:</b> 0.666</div>`)[0];
+                popup_3485e91795e6dbdef64f7a85aed6b555.setContent(html_d84be79f706b852d26c4fb2967d3489a);
+            
+        
+
+        circle_marker_15948bdfa6f37465db3b0e3208374a66.bindPopup(popup_3485e91795e6dbdef64f7a85aed6b555)
+        ;
+
+        
+    
+    
+            circle_marker_15948bdfa6f37465db3b0e3208374a66.bindTooltip(
+                `<div>
+                     Ukhia | Affordability: 0.612
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_614dc855848d1687015ce9efa83a71b9 = L.circleMarker(
+                [22.49, 92.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#feb953", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_c3411f6bb6fbc1262c8a70451b4ad51e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_bb7ce8a0e8a48483a7763f001c948821 = $(`<div id="html_bb7ce8a0e8a48483a7763f001c948821" style="width: 100.0%; height: 100.0%;"><b>Rangunia</b><br><b>Energy Affordability Score:</b> 0.354<br><b>Overall MEPI:</b> 0.367</div>`)[0];
+                popup_c3411f6bb6fbc1262c8a70451b4ad51e.setContent(html_bb7ce8a0e8a48483a7763f001c948821);
+            
+        
+
+        circle_marker_614dc855848d1687015ce9efa83a71b9.bindPopup(popup_c3411f6bb6fbc1262c8a70451b4ad51e)
+        ;
+
+        
+    
+    
+            circle_marker_614dc855848d1687015ce9efa83a71b9.bindTooltip(
+                `<div>
+                     Rangunia | Affordability: 0.354
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7766fa8f1eb61acd94278db75f86cb09 = L.circleMarker(
+                [22.3, 91.98],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec863", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_5cf21e6a110d405fb85b2b7d03840492 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5bebbceb87be71f50fbce61d9c0b2350 = $(`<div id="html_5bebbceb87be71f50fbce61d9c0b2350" style="width: 100.0%; height: 100.0%;"><b>Patiya</b><br><b>Energy Affordability Score:</b> 0.306<br><b>Overall MEPI:</b> 0.318</div>`)[0];
+                popup_5cf21e6a110d405fb85b2b7d03840492.setContent(html_5bebbceb87be71f50fbce61d9c0b2350);
+            
+        
+
+        circle_marker_7766fa8f1eb61acd94278db75f86cb09.bindPopup(popup_5cf21e6a110d405fb85b2b7d03840492)
+        ;
+
+        
+    
+    
+            circle_marker_7766fa8f1eb61acd94278db75f86cb09.bindTooltip(
+                `<div>
+                     Patiya | Affordability: 0.306
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a81447810bcc7182ae804c066c223ab4 = L.circleMarker(
+                [23.59, 90.14],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe590", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_d2243f8a4a134f972cd66d522f60a7f8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_fad6cef19aa1c674b46b9c01d3245660 = $(`<div id="html_fad6cef19aa1c674b46b9c01d3245660" style="width: 100.0%; height: 100.0%;"><b>Dohar</b><br><b>Energy Affordability Score:</b> 0.173<br><b>Overall MEPI:</b> 0.183</div>`)[0];
+                popup_d2243f8a4a134f972cd66d522f60a7f8.setContent(html_fad6cef19aa1c674b46b9c01d3245660);
+            
+        
+
+        circle_marker_a81447810bcc7182ae804c066c223ab4.bindPopup(popup_d2243f8a4a134f972cd66d522f60a7f8)
+        ;
+
+        
+    
+    
+            circle_marker_a81447810bcc7182ae804c066c223ab4.bindTooltip(
+                `<div>
+                     Dohar | Affordability: 0.173
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5859676317a81df4f618cacf0a3d608 = L.circleMarker(
+                [23.61, 90.02],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffeea3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_28d577f1f4f2dd88b08a5f7ad3de68db = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_e1ac58a232d7054015483f83d1bed558 = $(`<div id="html_e1ac58a232d7054015483f83d1bed558" style="width: 100.0%; height: 100.0%;"><b>Nawabganj</b><br><b>Energy Affordability Score:</b> 0.119<br><b>Overall MEPI:</b> 0.128</div>`)[0];
+                popup_28d577f1f4f2dd88b08a5f7ad3de68db.setContent(html_e1ac58a232d7054015483f83d1bed558);
+            
+        
+
+        circle_marker_c5859676317a81df4f618cacf0a3d608.bindPopup(popup_28d577f1f4f2dd88b08a5f7ad3de68db)
+        ;
+
+        
+    
+    
+            circle_marker_c5859676317a81df4f618cacf0a3d608.bindTooltip(
+                `<div>
+                     Nawabganj | Affordability: 0.119
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89dfe2d7f971b1e6f079656c69d790f4 = L.circleMarker(
+                [23.84, 90.27],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffcc", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_6fa415b257a899bc7b668410b0a8d1f5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9de2aefa6309757809a4f929c67f8ea0 = $(`<div id="html_9de2aefa6309757809a4f929c67f8ea0" style="width: 100.0%; height: 100.0%;"><b>Savar</b><br><b>Energy Affordability Score:</b> 0.000<br><b>Overall MEPI:</b> 0.000</div>`)[0];
+                popup_6fa415b257a899bc7b668410b0a8d1f5.setContent(html_9de2aefa6309757809a4f929c67f8ea0);
+            
+        
+
+        circle_marker_89dfe2d7f971b1e6f079656c69d790f4.bindPopup(popup_6fa415b257a899bc7b668410b0a8d1f5)
+        ;
+
+        
+    
+    
+            circle_marker_89dfe2d7f971b1e6f079656c69d790f4.bindTooltip(
+                `<div>
+                     Savar | Affordability: 0.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04ed7d731eb72ab81b1b422c074e361e = L.circleMarker(
+                [23.71, 90.38],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff8bb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_4f59845ae34b4351e3d6491872cc6432 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1add06d6e26cb5c16648305fd928cff7 = $(`<div id="html_1add06d6e26cb5c16648305fd928cff7" style="width: 100.0%; height: 100.0%;"><b>Keraniganj</b><br><b>Energy Affordability Score:</b> 0.050<br><b>Overall MEPI:</b> 0.058</div>`)[0];
+                popup_4f59845ae34b4351e3d6491872cc6432.setContent(html_1add06d6e26cb5c16648305fd928cff7);
+            
+        
+
+        circle_marker_04ed7d731eb72ab81b1b422c074e361e.bindPopup(popup_4f59845ae34b4351e3d6491872cc6432)
+        ;
+
+        
+    
+    
+            circle_marker_04ed7d731eb72ab81b1b422c074e361e.bindTooltip(
+                `<div>
+                     Keraniganj | Affordability: 0.050
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6228fc1593660a773d355e5dc576b20 = L.circleMarker(
+                [22.41, 89.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd6e33", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_10378e53d0d1605d2b60c8c95aba839c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b8a1a552eb900b89a8fe339f99566b21 = $(`<div id="html_b8a1a552eb900b89a8fe339f99566b21" style="width: 100.0%; height: 100.0%;"><b>Kaliganj</b><br><b>Energy Affordability Score:</b> 0.561<br><b>Overall MEPI:</b> 0.609</div>`)[0];
+                popup_10378e53d0d1605d2b60c8c95aba839c.setContent(html_b8a1a552eb900b89a8fe339f99566b21);
+            
+        
+
+        circle_marker_f6228fc1593660a773d355e5dc576b20.bindPopup(popup_10378e53d0d1605d2b60c8c95aba839c)
+        ;
+
+        
+    
+    
+            circle_marker_f6228fc1593660a773d355e5dc576b20.bindTooltip(
+                `<div>
+                     Kaliganj | Affordability: 0.561
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_554267b439a9bcf739f007cd3c810801 = L.circleMarker(
+                [22.15, 89.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d51020", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_1c435dc8a496c40b02dcd37d1aef458e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_eb8f3723338fe2f55e16c1df7334a8bb = $(`<div id="html_eb8f3723338fe2f55e16c1df7334a8bb" style="width: 100.0%; height: 100.0%;"><b>Shyamnagar</b><br><b>Energy Affordability Score:</b> 0.796<br><b>Overall MEPI:</b> 0.834</div>`)[0];
+                popup_1c435dc8a496c40b02dcd37d1aef458e.setContent(html_eb8f3723338fe2f55e16c1df7334a8bb);
+            
+        
+
+        circle_marker_554267b439a9bcf739f007cd3c810801.bindPopup(popup_1c435dc8a496c40b02dcd37d1aef458e)
+        ;
+
+        
+    
+    
+            circle_marker_554267b439a9bcf739f007cd3c810801.bindTooltip(
+                `<div>
+                     Shyamnagar | Affordability: 0.796
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7ec8f9ac65cb7717a1bafdcbe1824ee = L.circleMarker(
+                [25.07, 91.4],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd9a42", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_2015d4c0423fe3ec9b378243cb0efd4f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0732cacc3c662dbb58f9122fab0c1f4b = $(`<div id="html_0732cacc3c662dbb58f9122fab0c1f4b" style="width: 100.0%; height: 100.0%;"><b>Sunamganj Sadar</b><br><b>Energy Affordability Score:</b> 0.455<br><b>Overall MEPI:</b> 0.485</div>`)[0];
+                popup_2015d4c0423fe3ec9b378243cb0efd4f.setContent(html_0732cacc3c662dbb58f9122fab0c1f4b);
+            
+        
+
+        circle_marker_e7ec8f9ac65cb7717a1bafdcbe1824ee.bindPopup(popup_2015d4c0423fe3ec9b378243cb0efd4f)
+        ;
+
+        
+    
+    
+            circle_marker_e7ec8f9ac65cb7717a1bafdcbe1824ee.bindTooltip(
+                `<div>
+                     Sunamganj Sadar | Affordability: 0.455
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45e04930fec32512416dd5bf354eb699 = L.circleMarker(
+                [25.1, 91.2],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd863a", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_a0c15fcc24e06956e8870bd3127ad41a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7602a34e4cafdc8020f6da8aa6075127 = $(`<div id="html_7602a34e4cafdc8020f6da8aa6075127" style="width: 100.0%; height: 100.0%;"><b>Tahirpur</b><br><b>Energy Affordability Score:</b> 0.515<br><b>Overall MEPI:</b> 0.558</div>`)[0];
+                popup_a0c15fcc24e06956e8870bd3127ad41a.setContent(html_7602a34e4cafdc8020f6da8aa6075127);
+            
+        
+
+        circle_marker_45e04930fec32512416dd5bf354eb699.bindPopup(popup_a0c15fcc24e06956e8870bd3127ad41a)
+        ;
+
+        
+    
+    
+            circle_marker_45e04930fec32512416dd5bf354eb699.bindTooltip(
+                `<div>
+                     Tahirpur | Affordability: 0.515
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e46f686a656c505a60bb9483c80dd726 = L.circleMarker(
+                [25.16, 89.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e61f1d", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_22d9ac3a8e813d5cdf30e5723aa5a431 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_1f7f4c743217217d98c933c1891e195b = $(`<div id="html_1f7f4c743217217d98c933c1891e195b" style="width: 100.0%; height: 100.0%;"><b>Fulchhari</b><br><b>Energy Affordability Score:</b> 0.734<br><b>Overall MEPI:</b> 0.781</div>`)[0];
+                popup_22d9ac3a8e813d5cdf30e5723aa5a431.setContent(html_1f7f4c743217217d98c933c1891e195b);
+            
+        
+
+        circle_marker_e46f686a656c505a60bb9483c80dd726.bindPopup(popup_22d9ac3a8e813d5cdf30e5723aa5a431)
+        ;
+
+        
+    
+    
+            circle_marker_e46f686a656c505a60bb9483c80dd726.bindTooltip(
+                `<div>
+                     Fulchhari | Affordability: 0.734
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1b52c93a768a2cb932d2684d535ba9b = L.circleMarker(
+                [25.09, 89.85],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f64227", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_6efce91ad234226c5734438f37f038fb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_90f485e88a059177a4ede1adf85c6fa3 = $(`<div id="html_90f485e88a059177a4ede1adf85c6fa3" style="width: 100.0%; height: 100.0%;"><b>Saghata</b><br><b>Energy Affordability Score:</b> 0.655<br><b>Overall MEPI:</b> 0.704</div>`)[0];
+                popup_6efce91ad234226c5734438f37f038fb.setContent(html_90f485e88a059177a4ede1adf85c6fa3);
+            
+        
+
+        circle_marker_c1b52c93a768a2cb932d2684d535ba9b.bindPopup(popup_6efce91ad234226c5734438f37f038fb)
+        ;
+
+        
+    
+    
+            circle_marker_c1b52c93a768a2cb932d2684d535ba9b.bindTooltip(
+                `<div>
+                     Saghata | Affordability: 0.655
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7082295412c793ff0468dcc5ab248300 = L.circleMarker(
+                [24.37, 88.6],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffcc5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_903eb5367eddeaaf910bc8dbc63786ab = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f609ca2f383a986bb435d2b07d1135bd = $(`<div id="html_f609ca2f383a986bb435d2b07d1135bd" style="width: 100.0%; height: 100.0%;"><b>Rajshahi Sadar</b><br><b>Energy Affordability Score:</b> 0.022<br><b>Overall MEPI:</b> 0.029</div>`)[0];
+                popup_903eb5367eddeaaf910bc8dbc63786ab.setContent(html_f609ca2f383a986bb435d2b07d1135bd);
+            
+        
+
+        circle_marker_7082295412c793ff0468dcc5ab248300.bindPopup(popup_903eb5367eddeaaf910bc8dbc63786ab)
+        ;
+
+        
+    
+    
+            circle_marker_7082295412c793ff0468dcc5ab248300.bindTooltip(
+                `<div>
+                     Rajshahi Sadar | Affordability: 0.022
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_344a053e54ee3b090f31018355509376 = L.circleMarker(
+                [24.52, 88.42],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fed16e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_67c62c140fd8a71469f5c0289eb670ba = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f004e86bd97f672fa699b90ff3c47162 = $(`<div id="html_f004e86bd97f672fa699b90ff3c47162" style="width: 100.0%; height: 100.0%;"><b>Godagari</b><br><b>Energy Affordability Score:</b> 0.277<br><b>Overall MEPI:</b> 0.283</div>`)[0];
+                popup_67c62c140fd8a71469f5c0289eb670ba.setContent(html_f004e86bd97f672fa699b90ff3c47162);
+            
+        
+
+        circle_marker_344a053e54ee3b090f31018355509376.bindPopup(popup_67c62c140fd8a71469f5c0289eb670ba)
+        ;
+
+        
+    
+    
+            circle_marker_344a053e54ee3b090f31018355509376.bindTooltip(
+                `<div>
+                     Godagari | Affordability: 0.277
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6841e1a0188a2ac150639a45256e64f = L.circleMarker(
+                [22.19, 92.22],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b60026", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_6a2982ba85a18df45309b8d3f95f16f1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_53b9529ad24b14852c6fb9dc4f2e70a6 = $(`<div id="html_53b9529ad24b14852c6fb9dc4f2e70a6" style="width: 100.0%; height: 100.0%;"><b>Bandarban Sadar</b><br><b>Energy Affordability Score:</b> 0.889<br><b>Overall MEPI:</b> 0.911</div>`)[0];
+                popup_6a2982ba85a18df45309b8d3f95f16f1.setContent(html_53b9529ad24b14852c6fb9dc4f2e70a6);
+            
+        
+
+        circle_marker_a6841e1a0188a2ac150639a45256e64f.bindPopup(popup_6a2982ba85a18df45309b8d3f95f16f1)
+        ;
+
+        
+    
+    
+            circle_marker_a6841e1a0188a2ac150639a45256e64f.bindTooltip(
+                `<div>
+                     Bandarban Sadar | Affordability: 0.889
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2677dd306fbfc1e1f6ffe629dd81b27f = L.circleMarker(
+                [22.08, 92.28],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800026", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_a2e45ddd772ef25db27ecbf788fa5c0e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7cefb4e998d4542be76803208f8cf3e0 = $(`<div id="html_7cefb4e998d4542be76803208f8cf3e0" style="width: 100.0%; height: 100.0%;"><b>Rowangchhari</b><br><b>Energy Affordability Score:</b> 1.000<br><b>Overall MEPI:</b> 1.000</div>`)[0];
+                popup_a2e45ddd772ef25db27ecbf788fa5c0e.setContent(html_7cefb4e998d4542be76803208f8cf3e0);
+            
+        
+
+        circle_marker_2677dd306fbfc1e1f6ffe629dd81b27f.bindPopup(popup_a2e45ddd772ef25db27ecbf788fa5c0e)
+        ;
+
+        
+    
+    
+            circle_marker_2677dd306fbfc1e1f6ffe629dd81b27f.bindTooltip(
+                `<div>
+                     Rowangchhari | Affordability: 1.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c5e0aeecb12a329f6ec715d53079b5e = L.circleMarker(
+                [22.7, 90.37],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffea99", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_297a47b08ec1a733e8e9a2d11fc38299 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_088e3b33368a8821ee470e563b004404 = $(`<div id="html_088e3b33368a8821ee470e563b004404" style="width: 100.0%; height: 100.0%;"><b>Barishal Sadar</b><br><b>Energy Affordability Score:</b> 0.148<br><b>Overall MEPI:</b> 0.154</div>`)[0];
+                popup_297a47b08ec1a733e8e9a2d11fc38299.setContent(html_088e3b33368a8821ee470e563b004404);
+            
+        
+
+        circle_marker_0c5e0aeecb12a329f6ec715d53079b5e.bindPopup(popup_297a47b08ec1a733e8e9a2d11fc38299)
+        ;
+
+        
+    
+    
+            circle_marker_0c5e0aeecb12a329f6ec715d53079b5e.bindTooltip(
+                `<div>
+                     Barishal Sadar | Affordability: 0.148
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1191d6d52756b9100c8fa87d86908cca = L.circleMarker(
+                [22.61, 90.51],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fea546", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 0.5}
+            ).addTo(feature_group_7dff459443e731c693a65d4b207756fd);
+        
+    
+        var popup_b6a93b21c35bdaf04f80c9469683dd91 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f9836e74064349f9b5719dcc0b706cb4 = $(`<div id="html_f9836e74064349f9b5719dcc0b706cb4" style="width: 100.0%; height: 100.0%;"><b>Muladi</b><br><b>Energy Affordability Score:</b> 0.422<br><b>Overall MEPI:</b> 0.442</div>`)[0];
+                popup_b6a93b21c35bdaf04f80c9469683dd91.setContent(html_f9836e74064349f9b5719dcc0b706cb4);
+            
+        
+
+        circle_marker_1191d6d52756b9100c8fa87d86908cca.bindPopup(popup_b6a93b21c35bdaf04f80c9469683dd91)
+        ;
+
+        
+    
+    
+            circle_marker_1191d6d52756b9100c8fa87d86908cca.bindTooltip(
+                `<div>
+                     Muladi | Affordability: 0.422
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_ee5eea86fd44228d26f45631c9795b66_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_a962c8aabcffefc57037db5c5e2b5be3,
+                },
+                overlays :  {
+                    "Energy Availability" : feature_group_670a408bd5b9229be43ef53adb60fe55,
+                    "Energy Reliability" : feature_group_ee80b1ad534e27633371f132dfea41f3,
+                    "Energy Adequacy" : feature_group_2b2db5b9a1fba741ce4818dc23c323fc,
+                    "Energy Quality" : feature_group_625507aacd45d5de30348efbb7020eea,
+                    "Energy Affordability" : feature_group_7dff459443e731c693a65d4b207756fd,
+                },
+            };
+            let layer_control_ee5eea86fd44228d26f45631c9795b66 = L.control.layers(
+                layer_control_ee5eea86fd44228d26f45631c9795b66_layers.base_layers,
+                layer_control_ee5eea86fd44228d26f45631c9795b66_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_406fffb6ba30c356aa9d9c4a006159da);
+
+        
+</script>
+</html>

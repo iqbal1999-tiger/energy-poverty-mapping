@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8e975b8828da21eaef1f6e7db2ac893e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8e975b8828da21eaef1f6e7db2ac893e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8e975b8828da21eaef1f6e7db2ac893e = L.map(
+                "map_8e975b8828da21eaef1f6e7db2ac893e",
+                {
+                    center: [23.7, 90.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c94f99bb3b0e20d7be764e2a63c1f9f3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c94f99bb3b0e20d7be764e2a63c1f9f3.addTo(map_8e975b8828da21eaef1f6e7db2ac893e);
+        
+    
+            var tile_layer_f7bf033635a736c448d7384fd3854031 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_9865746e9c9e3894277640c20d07e6b7 = new L.Control.MiniMap(
+                tile_layer_f7bf033635a736c448d7384fd3854031,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_8e975b8828da21eaef1f6e7db2ac893e.addControl(mini_map_9865746e9c9e3894277640c20d07e6b7);
+        
+    
+            var feature_group_04821b622f26e1a2a5c45ff620ba6492 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7fff94cd7c1eb221d07ed5572bc0061d = L.circleMarker(
+                [20.86, 92.3],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_1ee1e813672268dbc506d6157fc44bf7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5d5c3e64d181cae5aadc0f44fe0d525f = $(`<div id="html_5d5c3e64d181cae5aadc0f44fe0d525f" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Teknaf</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Cox's Bazar<br>       <b>Division:</b> Chittagong<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.749<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.797<br>  <b>Reliability:</b> 0.673<br>  <b>Adequacy:</b> 0.824<br>  <b>Quality:</b> 0.750<br>  <b>Affordability:</b> 0.703     </div>     </div>`)[0];
+                popup_1ee1e813672268dbc506d6157fc44bf7.setContent(html_5d5c3e64d181cae5aadc0f44fe0d525f);
+            
+        
+
+        circle_marker_7fff94cd7c1eb221d07ed5572bc0061d.bindPopup(popup_1ee1e813672268dbc506d6157fc44bf7)
+        ;
+
+        
+    
+    
+            circle_marker_7fff94cd7c1eb221d07ed5572bc0061d.bindTooltip(
+                `<div>
+                     Teknaf: MEPI=0.749
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_693e13558fee279bfd140716c7d6ec69 = L.circleMarker(
+                [21.22, 92.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_85f92785389930343cbc0ddc088a5943 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_45930c701f60dd23a6732e9d335cc19c = $(`<div id="html_45930c701f60dd23a6732e9d335cc19c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Ukhia</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Cox's Bazar<br>       <b>Division:</b> Chittagong<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.666<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.725<br>  <b>Reliability:</b> 0.570<br>  <b>Adequacy:</b> 0.760<br>  <b>Quality:</b> 0.660<br>  <b>Affordability:</b> 0.612     </div>     </div>`)[0];
+                popup_85f92785389930343cbc0ddc088a5943.setContent(html_45930c701f60dd23a6732e9d335cc19c);
+            
+        
+
+        circle_marker_693e13558fee279bfd140716c7d6ec69.bindPopup(popup_85f92785389930343cbc0ddc088a5943)
+        ;
+
+        
+    
+    
+            circle_marker_693e13558fee279bfd140716c7d6ec69.bindTooltip(
+                `<div>
+                     Ukhia: MEPI=0.666
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_981a1f26b87f5885317b356860f37b28 = L.circleMarker(
+                [22.15, 89.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_010835914c7249f9e56e99f069240587 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3714dc8cd595b1f6f6006b0fe5b1c1b3 = $(`<div id="html_3714dc8cd595b1f6f6006b0fe5b1c1b3" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Shyamnagar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Satkhira<br>       <b>Division:</b> Khulna<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.834<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.866<br>  <b>Reliability:</b> 0.779<br>  <b>Adequacy:</b> 0.890<br>  <b>Quality:</b> 0.838<br>  <b>Affordability:</b> 0.796     </div>     </div>`)[0];
+                popup_010835914c7249f9e56e99f069240587.setContent(html_3714dc8cd595b1f6f6006b0fe5b1c1b3);
+            
+        
+
+        circle_marker_981a1f26b87f5885317b356860f37b28.bindPopup(popup_010835914c7249f9e56e99f069240587)
+        ;
+
+        
+    
+    
+            circle_marker_981a1f26b87f5885317b356860f37b28.bindTooltip(
+                `<div>
+                     Shyamnagar: MEPI=0.834
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56664a484094122358dd483d66efa0e8 = L.circleMarker(
+                [25.16, 89.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_bad35299399fe84356c763f90135eabd = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_be91a550483939665bbe09504271e5e4 = $(`<div id="html_be91a550483939665bbe09504271e5e4" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Fulchhari</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Gaibandha<br>       <b>Division:</b> Rangpur<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.781<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.811<br>  <b>Reliability:</b> 0.716<br>  <b>Adequacy:</b> 0.854<br>  <b>Quality:</b> 0.790<br>  <b>Affordability:</b> 0.734     </div>     </div>`)[0];
+                popup_bad35299399fe84356c763f90135eabd.setContent(html_be91a550483939665bbe09504271e5e4);
+            
+        
+
+        circle_marker_56664a484094122358dd483d66efa0e8.bindPopup(popup_bad35299399fe84356c763f90135eabd)
+        ;
+
+        
+    
+    
+            circle_marker_56664a484094122358dd483d66efa0e8.bindTooltip(
+                `<div>
+                     Fulchhari: MEPI=0.781
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6539d72e3a66564abde8f415849362b = L.circleMarker(
+                [25.09, 89.85],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_a1aaaf577e12519b78cf86c9a6dab10b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5762086d8618a988345f32ef942cf18f = $(`<div id="html_5762086d8618a988345f32ef942cf18f" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Saghata</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Gaibandha<br>       <b>Division:</b> Rangpur<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.704<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.754<br>  <b>Reliability:</b> 0.627<br>  <b>Adequacy:</b> 0.784<br>  <b>Quality:</b> 0.702<br>  <b>Affordability:</b> 0.655     </div>     </div>`)[0];
+                popup_a1aaaf577e12519b78cf86c9a6dab10b.setContent(html_5762086d8618a988345f32ef942cf18f);
+            
+        
+
+        circle_marker_d6539d72e3a66564abde8f415849362b.bindPopup(popup_a1aaaf577e12519b78cf86c9a6dab10b)
+        ;
+
+        
+    
+    
+            circle_marker_d6539d72e3a66564abde8f415849362b.bindTooltip(
+                `<div>
+                     Saghata: MEPI=0.704
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_272e639e4c09826db03f2505ea63f790 = L.circleMarker(
+                [22.19, 92.22],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_c9d9eaef5611f66de2e720d86970a7cf = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_aed5746d86d31b7d4560fb3b72503662 = $(`<div id="html_aed5746d86d31b7d4560fb3b72503662" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Bandarban Sadar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Bandarban<br>       <b>Division:</b> Chittagong<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.911<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.925<br>  <b>Reliability:</b> 0.880<br>  <b>Adequacy:</b> 0.945<br>  <b>Quality:</b> 0.916<br>  <b>Affordability:</b> 0.889     </div>     </div>`)[0];
+                popup_c9d9eaef5611f66de2e720d86970a7cf.setContent(html_aed5746d86d31b7d4560fb3b72503662);
+            
+        
+
+        circle_marker_272e639e4c09826db03f2505ea63f790.bindPopup(popup_c9d9eaef5611f66de2e720d86970a7cf)
+        ;
+
+        
+    
+    
+            circle_marker_272e639e4c09826db03f2505ea63f790.bindTooltip(
+                `<div>
+                     Bandarban Sadar: MEPI=0.911
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7823a57624a02cc087f359d494c47861 = L.circleMarker(
+                [22.08, 92.28],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
+            ).addTo(feature_group_04821b622f26e1a2a5c45ff620ba6492);
+        
+    
+        var popup_e943011f07a151deaddbaf4db040b9cc = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_890fba1cd9f59d5f31f40af4728810db = $(`<div id="html_890fba1cd9f59d5f31f40af4728810db" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Rowangchhari</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Bandarban<br>       <b>Division:</b> Chittagong<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 1.000<br>       <b>Category:</b> <span style='color:#e74c3c;font-weight:bold;'>Severely Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 1.000<br>  <b>Reliability:</b> 1.000<br>  <b>Adequacy:</b> 1.000<br>  <b>Quality:</b> 1.000<br>  <b>Affordability:</b> 1.000     </div>     </div>`)[0];
+                popup_e943011f07a151deaddbaf4db040b9cc.setContent(html_890fba1cd9f59d5f31f40af4728810db);
+            
+        
+
+        circle_marker_7823a57624a02cc087f359d494c47861.bindPopup(popup_e943011f07a151deaddbaf4db040b9cc)
+        ;
+
+        
+    
+    
+            circle_marker_7823a57624a02cc087f359d494c47861.bindTooltip(
+                `<div>
+                     Rowangchhari: MEPI=1.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_04821b622f26e1a2a5c45ff620ba6492.addTo(map_8e975b8828da21eaef1f6e7db2ac893e);
+        
+    
+            var feature_group_e70b104f9f4eff318549087b672bf659 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_d36a8f381c176b7e3830a5c940a96b09 = L.circleMarker(
+                [22.49, 92.03],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_832dbcd701a2b29869e813fff335294b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_be9764c5afd744145bcbdc0660cf75b4 = $(`<div id="html_be9764c5afd744145bcbdc0660cf75b4" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Rangunia</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Chittagong<br>       <b>Division:</b> Chittagong<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.367<br>       <b>Category:</b> <span style='color:#f39c12;font-weight:bold;'>Moderately Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.426<br>  <b>Reliability:</b> 0.223<br>  <b>Adequacy:</b> 0.471<br>  <b>Quality:</b> 0.361<br>  <b>Affordability:</b> 0.354     </div>     </div>`)[0];
+                popup_832dbcd701a2b29869e813fff335294b.setContent(html_be9764c5afd744145bcbdc0660cf75b4);
+            
+        
+
+        circle_marker_d36a8f381c176b7e3830a5c940a96b09.bindPopup(popup_832dbcd701a2b29869e813fff335294b)
+        ;
+
+        
+    
+    
+            circle_marker_d36a8f381c176b7e3830a5c940a96b09.bindTooltip(
+                `<div>
+                     Rangunia: MEPI=0.367
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b48f91fd1feab9e0a112172dd7fd013a = L.circleMarker(
+                [22.3, 91.98],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_aa93bdcf10d9bed3a2d6bfb16797dc14 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4a0bd03dd76f55078e6bd2d24b773ef3 = $(`<div id="html_4a0bd03dd76f55078e6bd2d24b773ef3" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Patiya</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Chittagong<br>       <b>Division:</b> Chittagong<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.318<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.370<br>  <b>Reliability:</b> 0.187<br>  <b>Adequacy:</b> 0.418<br>  <b>Quality:</b> 0.310<br>  <b>Affordability:</b> 0.306     </div>     </div>`)[0];
+                popup_aa93bdcf10d9bed3a2d6bfb16797dc14.setContent(html_4a0bd03dd76f55078e6bd2d24b773ef3);
+            
+        
+
+        circle_marker_b48f91fd1feab9e0a112172dd7fd013a.bindPopup(popup_aa93bdcf10d9bed3a2d6bfb16797dc14)
+        ;
+
+        
+    
+    
+            circle_marker_b48f91fd1feab9e0a112172dd7fd013a.bindTooltip(
+                `<div>
+                     Patiya: MEPI=0.318
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c99d280542bc877e7e83fafae46d696 = L.circleMarker(
+                [23.59, 90.14],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_3ec692455636074148d6c9f7ae239bc1 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4ee54fb4fe5e6dde42648fcdd939ee54 = $(`<div id="html_4ee54fb4fe5e6dde42648fcdd939ee54" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Dohar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Dhaka<br>       <b>Division:</b> Dhaka<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.183<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.206<br>  <b>Reliability:</b> 0.112<br>  <b>Adequacy:</b> 0.249<br>  <b>Quality:</b> 0.174<br>  <b>Affordability:</b> 0.173     </div>     </div>`)[0];
+                popup_3ec692455636074148d6c9f7ae239bc1.setContent(html_4ee54fb4fe5e6dde42648fcdd939ee54);
+            
+        
+
+        circle_marker_0c99d280542bc877e7e83fafae46d696.bindPopup(popup_3ec692455636074148d6c9f7ae239bc1)
+        ;
+
+        
+    
+    
+            circle_marker_0c99d280542bc877e7e83fafae46d696.bindTooltip(
+                `<div>
+                     Dohar: MEPI=0.183
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5b1bab0e1f8711a2774fd687044c31b = L.circleMarker(
+                [23.61, 90.02],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_2fc7a096a8de874ac33b2d5aea84592a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d2384528f78ce9a166836907f5659436 = $(`<div id="html_d2384528f78ce9a166836907f5659436" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Nawabganj</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Dhaka<br>       <b>Division:</b> Dhaka<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.128<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.152<br>  <b>Reliability:</b> 0.075<br>  <b>Adequacy:</b> 0.181<br>  <b>Quality:</b> 0.113<br>  <b>Affordability:</b> 0.119     </div>     </div>`)[0];
+                popup_2fc7a096a8de874ac33b2d5aea84592a.setContent(html_d2384528f78ce9a166836907f5659436);
+            
+        
+
+        circle_marker_e5b1bab0e1f8711a2774fd687044c31b.bindPopup(popup_2fc7a096a8de874ac33b2d5aea84592a)
+        ;
+
+        
+    
+    
+            circle_marker_e5b1bab0e1f8711a2774fd687044c31b.bindTooltip(
+                `<div>
+                     Nawabganj: MEPI=0.128
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a56616a5307e4cb8e0f3e78a583a0c1c = L.circleMarker(
+                [23.84, 90.27],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_8fa20b73b0cb6947179193d8e29fc7ff = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_84cef7e436bf07e77d092bb00226cb42 = $(`<div id="html_84cef7e436bf07e77d092bb00226cb42" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Savar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Dhaka<br>       <b>Division:</b> Dhaka<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.000<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.000<br>  <b>Reliability:</b> 0.000<br>  <b>Adequacy:</b> 0.000<br>  <b>Quality:</b> 0.000<br>  <b>Affordability:</b> 0.000     </div>     </div>`)[0];
+                popup_8fa20b73b0cb6947179193d8e29fc7ff.setContent(html_84cef7e436bf07e77d092bb00226cb42);
+            
+        
+
+        circle_marker_a56616a5307e4cb8e0f3e78a583a0c1c.bindPopup(popup_8fa20b73b0cb6947179193d8e29fc7ff)
+        ;
+
+        
+    
+    
+            circle_marker_a56616a5307e4cb8e0f3e78a583a0c1c.bindTooltip(
+                `<div>
+                     Savar: MEPI=0.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f9092d7429f81db47bf663fecb5672a4 = L.circleMarker(
+                [23.71, 90.38],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_7edf880dffb2cb35b0c08b974e5ce3f2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d3662fa56a3ee3d545a402cfb7fd107c = $(`<div id="html_d3662fa56a3ee3d545a402cfb7fd107c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Keraniganj</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Dhaka<br>       <b>Division:</b> Dhaka<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.058<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.068<br>  <b>Reliability:</b> 0.034<br>  <b>Adequacy:</b> 0.071<br>  <b>Quality:</b> 0.064<br>  <b>Affordability:</b> 0.050     </div>     </div>`)[0];
+                popup_7edf880dffb2cb35b0c08b974e5ce3f2.setContent(html_d3662fa56a3ee3d545a402cfb7fd107c);
+            
+        
+
+        circle_marker_f9092d7429f81db47bf663fecb5672a4.bindPopup(popup_7edf880dffb2cb35b0c08b974e5ce3f2)
+        ;
+
+        
+    
+    
+            circle_marker_f9092d7429f81db47bf663fecb5672a4.bindTooltip(
+                `<div>
+                     Keraniganj: MEPI=0.058
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_073a0507327988f3653d3c0a47772d7a = L.circleMarker(
+                [22.41, 89.11],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_ff2b56a4c08bd371694f854914c616b5 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_777585ba01d2076b7574eb3d8d909b50 = $(`<div id="html_777585ba01d2076b7574eb3d8d909b50" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Kaliganj</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Satkhira<br>       <b>Division:</b> Khulna<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.609<br>       <b>Category:</b> <span style='color:#f39c12;font-weight:bold;'>Moderately Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.679<br>  <b>Reliability:</b> 0.519<br>  <b>Adequacy:</b> 0.703<br>  <b>Quality:</b> 0.586<br>  <b>Affordability:</b> 0.561     </div>     </div>`)[0];
+                popup_ff2b56a4c08bd371694f854914c616b5.setContent(html_777585ba01d2076b7574eb3d8d909b50);
+            
+        
+
+        circle_marker_073a0507327988f3653d3c0a47772d7a.bindPopup(popup_ff2b56a4c08bd371694f854914c616b5)
+        ;
+
+        
+    
+    
+            circle_marker_073a0507327988f3653d3c0a47772d7a.bindTooltip(
+                `<div>
+                     Kaliganj: MEPI=0.609
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac0564f03b2c246399e68fb1fbba843a = L.circleMarker(
+                [25.07, 91.4],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_3b04b091a7894a62adfb826623e76500 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6754443cba3d6e7d0497a50132ba7bc6 = $(`<div id="html_6754443cba3d6e7d0497a50132ba7bc6" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Sunamganj Sadar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Sunamganj<br>       <b>Division:</b> Sylhet<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.485<br>       <b>Category:</b> <span style='color:#f39c12;font-weight:bold;'>Moderately Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.553<br>  <b>Reliability:</b> 0.360<br>  <b>Adequacy:</b> 0.587<br>  <b>Quality:</b> 0.468<br>  <b>Affordability:</b> 0.455     </div>     </div>`)[0];
+                popup_3b04b091a7894a62adfb826623e76500.setContent(html_6754443cba3d6e7d0497a50132ba7bc6);
+            
+        
+
+        circle_marker_ac0564f03b2c246399e68fb1fbba843a.bindPopup(popup_3b04b091a7894a62adfb826623e76500)
+        ;
+
+        
+    
+    
+            circle_marker_ac0564f03b2c246399e68fb1fbba843a.bindTooltip(
+                `<div>
+                     Sunamganj Sadar: MEPI=0.485
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cfd79e5cda3c2d3091f79c0149b2fb46 = L.circleMarker(
+                [25.1, 91.2],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_2173da89d31594ff563669e8b7df6f74 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fc0a08bda0789ceb87d4955fffe58564 = $(`<div id="html_fc0a08bda0789ceb87d4955fffe58564" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Tahirpur</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Sunamganj<br>       <b>Division:</b> Sylhet<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.558<br>       <b>Category:</b> <span style='color:#f39c12;font-weight:bold;'>Moderately Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.643<br>  <b>Reliability:</b> 0.443<br>  <b>Adequacy:</b> 0.647<br>  <b>Quality:</b> 0.540<br>  <b>Affordability:</b> 0.515     </div>     </div>`)[0];
+                popup_2173da89d31594ff563669e8b7df6f74.setContent(html_fc0a08bda0789ceb87d4955fffe58564);
+            
+        
+
+        circle_marker_cfd79e5cda3c2d3091f79c0149b2fb46.bindPopup(popup_2173da89d31594ff563669e8b7df6f74)
+        ;
+
+        
+    
+    
+            circle_marker_cfd79e5cda3c2d3091f79c0149b2fb46.bindTooltip(
+                `<div>
+                     Tahirpur: MEPI=0.558
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19aec144741a28f09865299697d198d7 = L.circleMarker(
+                [24.37, 88.6],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_9d9914db3cafb81deb702373f5a4c7b2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_de551715d7b6bc2c6417e94b88d828d7 = $(`<div id="html_de551715d7b6bc2c6417e94b88d828d7" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Rajshahi Sadar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Rajshahi<br>       <b>Division:</b> Rajshahi<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.029<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.043<br>  <b>Reliability:</b> 0.020<br>  <b>Adequacy:</b> 0.031<br>  <b>Quality:</b> 0.028<br>  <b>Affordability:</b> 0.022     </div>     </div>`)[0];
+                popup_9d9914db3cafb81deb702373f5a4c7b2.setContent(html_de551715d7b6bc2c6417e94b88d828d7);
+            
+        
+
+        circle_marker_19aec144741a28f09865299697d198d7.bindPopup(popup_9d9914db3cafb81deb702373f5a4c7b2)
+        ;
+
+        
+    
+    
+            circle_marker_19aec144741a28f09865299697d198d7.bindTooltip(
+                `<div>
+                     Rajshahi Sadar: MEPI=0.029
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_969b05e01d8bc05386673130e8a52899 = L.circleMarker(
+                [24.52, 88.42],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_557d1d53eb3f4adb9d172c192fa88100 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a7176590db07af47467734ec64d1aac1 = $(`<div id="html_a7176590db07af47467734ec64d1aac1" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Godagari</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Rajshahi<br>       <b>Division:</b> Rajshahi<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.283<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.331<br>  <b>Reliability:</b> 0.164<br>  <b>Adequacy:</b> 0.370<br>  <b>Quality:</b> 0.272<br>  <b>Affordability:</b> 0.277     </div>     </div>`)[0];
+                popup_557d1d53eb3f4adb9d172c192fa88100.setContent(html_a7176590db07af47467734ec64d1aac1);
+            
+        
+
+        circle_marker_969b05e01d8bc05386673130e8a52899.bindPopup(popup_557d1d53eb3f4adb9d172c192fa88100)
+        ;
+
+        
+    
+    
+            circle_marker_969b05e01d8bc05386673130e8a52899.bindTooltip(
+                `<div>
+                     Godagari: MEPI=0.283
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf126a90c5cfc2efce540225c683333b = L.circleMarker(
+                [22.7, 90.37],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_c1cb4bd5dc646c4dcb046524ac1b1e2b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_87a4469e458ad4fda0bdce2166b58f7c = $(`<div id="html_87a4469e458ad4fda0bdce2166b58f7c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Barishal Sadar</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Barishal<br>       <b>Division:</b> Barishal<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.154<br>       <b>Category:</b> <span style='color:#2ecc71;font-weight:bold;'>Non-Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.171<br>  <b>Reliability:</b> 0.093<br>  <b>Adequacy:</b> 0.213<br>  <b>Quality:</b> 0.144<br>  <b>Affordability:</b> 0.148     </div>     </div>`)[0];
+                popup_c1cb4bd5dc646c4dcb046524ac1b1e2b.setContent(html_87a4469e458ad4fda0bdce2166b58f7c);
+            
+        
+
+        circle_marker_bf126a90c5cfc2efce540225c683333b.bindPopup(popup_c1cb4bd5dc646c4dcb046524ac1b1e2b)
+        ;
+
+        
+    
+    
+            circle_marker_bf126a90c5cfc2efce540225c683333b.bindTooltip(
+                `<div>
+                     Barishal Sadar: MEPI=0.154
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c15090203c9c76cf2a60d00a4bbf964c = L.circleMarker(
+                [22.61, 90.51],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e70b104f9f4eff318549087b672bf659);
+        
+    
+        var popup_b319460ddd8d1711547e85bd69112a2e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c37ce02472790e76ca2871215732a9e3 = $(`<div id="html_c37ce02472790e76ca2871215732a9e3" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; font-size: 13px; width: 240px;'>       <h4 style='margin: 4px 0; color: #2c3e50;'>Muladi</h4>       <hr style='margin: 4px 0;'>       <b>District:</b> Barishal<br>       <b>Division:</b> Barishal<br>       <b>Zone:</b> —<br>       <hr style='margin: 4px 0;'>       <b>MEPI Score:</b> 0.442<br>       <b>Category:</b> <span style='color:#f39c12;font-weight:bold;'>Moderately Poor</span><br>       <hr style='margin: 4px 0;'>       <b>Dimension Scores:</b><br>         <b>Availability:</b> 0.504<br>  <b>Reliability:</b> 0.323<br>  <b>Adequacy:</b> 0.539<br>  <b>Quality:</b> 0.425<br>  <b>Affordability:</b> 0.422     </div>     </div>`)[0];
+                popup_b319460ddd8d1711547e85bd69112a2e.setContent(html_c37ce02472790e76ca2871215732a9e3);
+            
+        
+
+        circle_marker_c15090203c9c76cf2a60d00a4bbf964c.bindPopup(popup_b319460ddd8d1711547e85bd69112a2e)
+        ;
+
+        
+    
+    
+            circle_marker_c15090203c9c76cf2a60d00a4bbf964c.bindTooltip(
+                `<div>
+                     Muladi: MEPI=0.442
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_e70b104f9f4eff318549087b672bf659.addTo(map_8e975b8828da21eaef1f6e7db2ac893e);
+        
+    
+            var layer_control_c0b48f64793da901f33cf9e7d21b7c28_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_c94f99bb3b0e20d7be764e2a63c1f9f3,
+                },
+                overlays :  {
+                    "Hotspots (MEPI \u2265 0.66)" : feature_group_04821b622f26e1a2a5c45ff620ba6492,
+                    "Non-Hotspots" : feature_group_e70b104f9f4eff318549087b672bf659,
+                },
+            };
+            let layer_control_c0b48f64793da901f33cf9e7d21b7c28 = L.control.layers(
+                layer_control_c0b48f64793da901f33cf9e7d21b7c28_layers.base_layers,
+                layer_control_c0b48f64793da901f33cf9e7d21b7c28_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_8e975b8828da21eaef1f6e7db2ac893e);
+
+        
+</script>
+</html>
