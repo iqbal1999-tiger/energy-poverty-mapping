@@ -491,11 +491,11 @@ class SpatialMapper:
 
             # Hotspots
             if "is_hotspot" in merged.columns:
-                merged[merged["is_hotspot"] == True].plot(
+                merged[merged["is_hotspot"]].plot(
                     ax=ax, color="#e74c3c", edgecolor="darkred",
                     linewidth=0.5, alpha=0.9, label="Hotspot (Severely Poor)",
                 )
-                merged[merged["is_hotspot"] == False].plot(
+                merged[~merged["is_hotspot"]].plot(
                     ax=ax, color="#2ecc71", edgecolor="grey",
                     linewidth=0.2, alpha=0.5, label="Not a Hotspot",
                 )
