@@ -1,0 +1,21 @@
+upazila_id,upazila_name,district,division,electricity_access_rate,clean_cooking_fuel_rate,grid_connection_rate,hours_supply_per_day,outage_frequency_per_month,outage_duration_hours,energy_consumption_kwh,lighting_hours_per_day,appliance_ownership_index,voltage_fluctuation_rate,energy_satisfaction_score,indoor_air_quality_index,energy_expenditure_share,energy_cost_per_kwh,subsidy_access_rate
+BD-U001,Teknaf,Cox's Bazar,Chittagong,48.2,12.5,40.1,10.2,18.3,4.5,52.4,6.8,0.18,12.4,2.1,0.35,28.5,9.8,8.2
+BD-U002,Ukhia,Cox's Bazar,Chittagong,52.7,15.8,45.6,11.5,15.7,3.8,61.3,7.4,0.22,10.8,2.4,0.38,25.9,9.2,10.5
+BD-U003,Rangunia,Chittagong,Chittagong,71.4,32.4,65.2,18.6,8.4,2.1,98.5,10.2,0.41,6.2,3.2,0.55,18.4,7.8,18.6
+BD-U004,Patiya,Chittagong,Chittagong,74.8,35.1,69.3,19.4,7.8,1.9,105.2,10.8,0.44,5.8,3.4,0.58,17.2,7.5,20.1
+BD-U005,Dohar,Dhaka,Dhaka,82.3,48.6,78.4,20.8,6.2,1.5,125.6,12.4,0.56,4.5,3.8,0.68,14.6,6.9,26.4
+BD-U006,Nawabganj,Dhaka,Dhaka,85.1,52.3,81.7,21.5,5.4,1.3,132.8,13.1,0.61,3.9,4.0,0.72,13.8,6.6,28.9
+BD-U007,Savar,Dhaka,Dhaka,91.6,65.8,89.4,22.8,3.6,0.9,158.4,14.5,0.74,2.8,4.3,0.81,11.4,6.2,35.2
+BD-U008,Keraniganj,Dhaka,Dhaka,88.9,59.4,86.2,22.1,4.2,1.1,148.7,13.9,0.69,3.3,4.1,0.76,12.5,6.4,32.8
+BD-U009,Kaliganj,Satkhira,Khulna,55.3,18.4,48.9,12.4,14.6,3.5,68.2,8.1,0.25,9.6,2.6,0.42,24.3,9.0,12.4
+BD-U010,Shyamnagar,Satkhira,Khulna,42.6,9.8,35.7,9.1,21.4,5.2,44.8,5.9,0.15,14.2,1.9,0.31,31.8,10.4,6.5
+BD-U011,Sunamganj Sadar,Sunamganj,Sylhet,63.8,24.6,57.3,15.8,11.2,2.8,82.1,9.4,0.32,7.8,2.9,0.49,21.4,8.4,15.8
+BD-U012,Tahirpur,Sunamganj,Sylhet,58.4,19.2,51.6,14.2,13.1,3.2,74.6,8.8,0.28,8.9,2.7,0.45,23.1,8.8,14.2
+BD-U013,Fulchhari,Gaibandha,Rangpur,47.1,11.8,39.4,9.8,19.6,4.8,50.2,6.4,0.16,13.1,2.0,0.33,29.8,10.0,7.8
+BD-U014,Saghata,Gaibandha,Rangpur,50.8,14.2,43.8,10.8,17.1,4.2,58.6,7.2,0.20,11.6,2.3,0.36,27.2,9.5,9.6
+BD-U015,Rajshahi Sadar,Rajshahi,Rajshahi,89.4,62.1,87.5,22.4,4.0,1.0,154.2,14.2,0.72,3.0,4.2,0.79,11.8,6.3,34.1
+BD-U016,Godagari,Rajshahi,Rajshahi,76.2,38.5,71.8,19.8,7.2,1.8,112.4,11.2,0.47,5.4,3.5,0.61,16.8,7.4,21.8
+BD-U017,Bandarban Sadar,Bandarban,Chittagong,38.4,8.2,30.6,8.2,23.8,6.1,38.5,5.2,0.12,15.8,1.7,0.28,34.5,11.2,5.1
+BD-U018,Rowangchhari,Bandarban,Chittagong,32.1,6.5,24.8,7.1,26.4,7.2,31.2,4.6,0.09,17.4,1.5,0.24,38.2,12.1,3.8
+BD-U019,Barishal Sadar,Barishal,Barishal,84.6,50.8,80.2,21.2,5.8,1.4,130.1,12.8,0.58,4.2,3.9,0.70,14.1,6.8,27.6
+BD-U020,Muladi,Barishal,Barishal,66.5,27.8,60.4,16.5,10.4,2.6,88.3,9.9,0.35,7.2,3.0,0.52,20.6,8.2,16.9
