@@ -1,5 +1,6 @@
-# Generated output directory
+# Generated output directories
 output/
+map_outputs/
 
 # Python cache
 __pycache__/
