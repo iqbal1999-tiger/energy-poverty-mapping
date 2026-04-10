@@ -84,6 +84,11 @@ class TemporalMapsExternal:
     def _out(self, filename: str) -> str:
         return self._mgr.get_path("temporal_maps", filename)
 
+    @property
+    def _sorted_years(self) -> list:
+        """Return years in the dataset sorted in ascending order."""
+        return sorted(self.yearly_data.keys())
+
     # ------------------------------------------------------------------
     # Per-year comparison map
     # ------------------------------------------------------------------
@@ -132,7 +137,7 @@ class TemporalMapsExternal:
 
     def _compute_change(self) -> Optional[pd.DataFrame]:
         """Compute per-upazila MEPI change between first and last year."""
-        years = sorted(self.yearly_data.keys())
+        years = self._sorted_years
         if len(years) < 2:
             return None
         first_df = self.yearly_data[years[0]][["upazila_name", "mepi_score", "lat", "lon"]].copy()
@@ -152,7 +157,7 @@ class TemporalMapsExternal:
             return None
 
         filename = "poverty_change_map.png"
-        years = sorted(self.yearly_data.keys())
+        years = self._sorted_years
         try:
             fig, ax = plt.subplots(figsize=(10, 12))
             absmax = max(abs(valid["change"].max()), abs(valid["change"].min()), 0.01)
@@ -273,7 +278,7 @@ class TemporalMapsExternal:
             warnings.warn("Pillow not installed – skipping temporal animation GIF.", stacklevel=2)
             return None
 
-        years = sorted(self.yearly_data.keys())
+        years = self._sorted_years
         frames = []
         filename = "temporal_animation.gif"
 

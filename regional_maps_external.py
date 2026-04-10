@@ -114,6 +114,11 @@ class RegionalMapsExternal:
     def _out(self, filename: str) -> str:
         return self._mgr.get_path("regional_maps", filename)
 
+    @staticmethod
+    def _normalise_str(series: pd.Series) -> pd.Series:
+        """Return a normalised (non-null, string) version of a column."""
+        return series.fillna("").astype(str)
+
     # ------------------------------------------------------------------
     # Zone-specific map
     # ------------------------------------------------------------------
@@ -129,7 +134,7 @@ class RegionalMapsExternal:
         color = zone_info.get("color", "#3498db")
 
         if "district" in self.df.columns:
-            mask = self.df["district"].str.lower().isin(districts)
+            mask = self._normalise_str(self.df["district"]).str.lower().isin(districts)
         else:
             mask = pd.Series([False] * len(self.df))
 
@@ -202,7 +207,7 @@ class RegionalMapsExternal:
 
             if "urban_rural" in self.df.columns:
                 for ax_i, category in enumerate(["Urban", "Rural"]):
-                    subset = self.df[self.df["urban_rural"].fillna("").astype(str).str.title() == category]
+                    subset = self.df[self._normalise_str(self.df["urban_rural"]).str.title() == category]
                     valid = subset.dropna(subset=["lat", "lon"])
                     if not valid.empty:
                         sc = axes[ax_i].scatter(

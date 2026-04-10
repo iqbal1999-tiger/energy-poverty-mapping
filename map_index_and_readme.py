@@ -253,9 +253,10 @@ class ExternalMapDocGenerator:
         now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
         # Build navigation links as a separate variable for clarity
-        nav_section_names = list(sections.keys()) + [
-            name for name in html_sections.keys() if name not in sections
-        ]
+        # Preserve display order: PNG sections first, then HTML-only sections
+        nav_section_names = list(sections.keys()) + list(
+            set(html_sections.keys()) - set(sections.keys())
+        )
         nav_links = "".join(
             f'<a href="#{name}">{name.replace("_", " ").title()}</a>'
             for name in nav_section_names
