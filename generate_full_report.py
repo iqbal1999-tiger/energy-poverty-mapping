@@ -23,6 +23,7 @@ Output files:
 
 import os
 import sys
+from typing import Optional
 
 import pandas as pd
 
@@ -43,11 +44,11 @@ from report_generator_full import FullReportGenerator
 
 # Path to input data (CSV with upazila-level indicators)
 # Set to None to use the bundled sample_data.csv
-INPUT_DATA_PATH: str | None = None
+INPUT_DATA_PATH: Optional[str] = None
 
 # Path to pre-computed MEPI results CSV (skips recalculation if provided)
 # Set to None to always recalculate
-RESULTS_CSV_PATH: str | None = os.path.join(_SCRIPT_DIR, "output", "mepi_results.csv")
+RESULTS_CSV_PATH: Optional[str] = os.path.join(_SCRIPT_DIR, "output", "mepi_results.csv")
 
 # Spatial maps directory (PNG files from the spatial mapping scripts)
 SPATIAL_MAPS_DIR: str = os.path.expanduser("~/spatial_maps_png")

@@ -65,7 +65,7 @@ _DIM_COLS = [
 _DIM_LABELS = ["Availability", "Reliability", "Adequacy", "Quality", "Affordability"]
 
 # Colour palette for the 5 dimensions
-_DIM_COLORS = ["#1F4E79", "#2E75B6", "#ED7D31", "#A9D18E", "#FF0000"]
+_DIM_COLORS = ["#1F4E79", "#2E75B6", "#ED7D31", "#A9D18E", "#C00000"]
 
 # Poverty-category colours
 _CAT_COLORS = {
