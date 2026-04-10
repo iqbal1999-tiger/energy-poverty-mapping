@@ -219,7 +219,13 @@ def _scatter_map(
     lon_col: str = "longitude",
 ) -> None:
     """Fallback: scatter plot using latitude/longitude coordinates."""
-    from bangladesh_coordinates import UpazilaDatabase, BANGLADESH_BOUNDS
+    try:
+        from bangladesh_coordinates import UpazilaDatabase, BANGLADESH_BOUNDS
+    except ImportError:
+        ax.text(0.5, 0.5, "bangladesh_coordinates module not available",
+                transform=ax.transAxes, ha="center", va="center", fontsize=11)
+        ax.set_title(title, fontsize=13, fontweight="bold", pad=14)
+        return
 
     db = UpazilaDatabase()
     rows = []
@@ -456,6 +462,20 @@ def _load_mepi_data(data_path: str) -> pd.DataFrame:
     if data_path and Path(data_path).exists():
         print(f"   Loading MEPI data from: {data_path}")
         return pd.read_csv(data_path)
+
+    if data_path:
+        raise FileNotFoundError(
+            f"Data file not found: {data_path}\n"
+            "Please check the path and try again."
+        )
+
+    sample_csv = Path("sample_data.csv")
+    if not sample_csv.exists():
+        raise FileNotFoundError(
+            "sample_data.csv not found in the current directory.\n"
+            "Please provide a MEPI results CSV with --data <path> or ensure "
+            "sample_data.csv exists in the working directory."
+        )
 
     print("   No CSV specified – computing MEPI from sample_data.csv ...")
     from data_utils import load_data, validate_data, handle_missing_values
