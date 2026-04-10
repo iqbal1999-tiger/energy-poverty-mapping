@@ -1,0 +1,40 @@
+category,rank,upazila_id,upazila_name,district,division,geographic_zone,mepi_score,classification,electricity_access_rate,clean_cooking_fuel_rate,grid_connection_rate,hours_supply_per_day,outage_frequency_per_month,outage_duration_hours,energy_consumption_kwh,lighting_hours_per_day,appliance_ownership_index,voltage_fluctuation_rate,energy_satisfaction_score,indoor_air_quality_index,energy_expenditure_share,energy_cost_per_kwh,subsidy_access_rate
+top10_most_poor,1,BD-U018,Rowangchhari,Bandarban,Chittagong,Hill Tracts,0.847,Severely Poor,32.1,6.5,24.8,7.1,26.4,7.2,31.2,4.6,0.09,17.4,1.5,0.24,38.2,12.1,3.8
+top10_most_poor,2,BD-U017,Bandarban Sadar,Bandarban,Chittagong,Hill Tracts,0.798,Severely Poor,38.4,8.2,30.6,8.2,23.8,6.1,38.5,5.2,0.12,15.8,1.7,0.28,34.5,11.2,5.1
+top10_most_poor,3,BD-U010,Shyamnagar,Satkhira,Khulna,Coastal,0.762,Severely Poor,42.6,9.8,35.7,9.1,21.4,5.2,44.8,5.9,0.15,14.2,1.9,0.31,31.8,10.4,6.5
+top10_most_poor,4,BD-U001,Teknaf,Cox's Bazar,Chittagong,Coastal,0.741,Severely Poor,48.2,12.5,40.1,10.2,18.3,4.5,52.4,6.8,0.18,12.4,2.1,0.35,28.5,9.8,8.2
+top10_most_poor,5,BD-U013,Fulchhari,Gaibandha,Rangpur,Char Islands,0.728,Severely Poor,47.1,11.8,39.4,9.8,19.6,4.8,50.2,6.4,0.16,13.1,2.0,0.33,29.8,10.0,7.8
+top10_most_poor,6,BD-U014,Saghata,Gaibandha,Rangpur,Char Islands,0.694,Severely Poor,50.8,14.2,43.8,10.8,17.1,4.2,58.6,7.2,0.20,11.6,2.3,0.36,27.2,9.5,9.6
+top10_most_poor,7,BD-U002,Ukhia,Cox's Bazar,Chittagong,Coastal,0.681,Severely Poor,52.7,15.8,45.6,11.5,15.7,3.8,61.3,7.4,0.22,10.8,2.4,0.38,25.9,9.2,10.5
+top10_most_poor,8,BD-U009,Kaliganj,Satkhira,Khulna,Coastal,0.658,Moderately Poor,55.3,18.4,48.9,12.4,14.6,3.5,68.2,8.1,0.25,9.6,2.6,0.42,24.3,9.0,12.4
+top10_most_poor,9,BD-U012,Tahirpur,Sunamganj,Sylhet,Haor Wetlands,0.621,Moderately Poor,58.4,19.2,51.6,14.2,13.1,3.2,74.6,8.8,0.28,8.9,2.7,0.45,23.1,8.8,14.2
+top10_most_poor,10,BD-U011,Sunamganj Sadar,Sunamganj,Sylhet,Haor Wetlands,0.574,Moderately Poor,63.8,24.6,57.3,15.8,11.2,2.8,82.1,9.4,0.32,7.8,2.9,0.49,21.4,8.4,15.8
+top10_least_poor,1,BD-U007,Savar,Dhaka,Dhaka,Urban Core,0.182,Non-Poor,91.6,65.8,89.4,22.8,3.6,0.9,158.4,14.5,0.74,2.8,4.3,0.81,11.4,6.2,35.2
+top10_least_poor,2,BD-U015,Rajshahi Sadar,Rajshahi,Rajshahi,Plains,0.196,Non-Poor,89.4,62.1,87.5,22.4,4.0,1.0,154.2,14.2,0.72,3.0,4.2,0.79,11.8,6.3,34.1
+top10_least_poor,3,BD-U008,Keraniganj,Dhaka,Dhaka,Urban Core,0.238,Non-Poor,88.9,59.4,86.2,22.1,4.2,1.1,148.7,13.9,0.69,3.3,4.1,0.76,12.5,6.4,32.8
+top10_least_poor,4,BD-U006,Nawabganj,Dhaka,Dhaka,Urban Core,0.251,Non-Poor,85.1,52.3,81.7,21.5,5.4,1.3,132.8,13.1,0.61,3.9,4.0,0.72,13.8,6.6,28.9
+top10_least_poor,5,BD-U019,Barishal Sadar,Barishal,Barishal,Plains,0.274,Non-Poor,84.6,50.8,80.2,21.2,5.8,1.4,130.1,12.8,0.58,4.2,3.9,0.70,14.1,6.8,27.6
+top10_least_poor,6,BD-U005,Dohar,Dhaka,Dhaka,Urban Core,0.298,Non-Poor,82.3,48.6,78.4,20.8,6.2,1.5,125.6,12.4,0.56,4.5,3.8,0.68,14.6,6.9,26.4
+top10_least_poor,7,BD-U016,Godagari,Rajshahi,Rajshahi,Plains,0.342,Moderately Poor,76.2,38.5,71.8,19.8,7.2,1.8,112.4,11.2,0.47,5.4,3.5,0.61,16.8,7.4,21.8
+top10_least_poor,8,BD-U004,Patiya,Chittagong,Chittagong,Plains,0.361,Moderately Poor,74.8,35.1,69.3,19.4,7.8,1.9,105.2,10.8,0.44,5.8,3.4,0.58,17.2,7.5,20.1
+top10_least_poor,9,BD-U003,Rangunia,Chittagong,Chittagong,Plains,0.378,Moderately Poor,71.4,32.4,65.2,18.6,8.4,2.1,98.5,10.2,0.41,6.2,3.2,0.55,18.4,7.8,18.6
+top10_least_poor,10,BD-U020,Muladi,Barishal,Barishal,Plains,0.412,Moderately Poor,66.5,27.8,60.4,16.5,10.4,2.6,88.3,9.9,0.35,7.2,3.0,0.52,20.6,8.2,16.9
+regional_division,,,Dhaka Division,,,Urban Core + Plains,0.248,Non-Poor,86.5,56.5,83.9,21.8,4.9,1.2,141.4,13.5,0.65,3.6,4.05,0.74,13.1,6.5,30.8
+regional_division,,,Rajshahi Division,,,Plains,0.310,Non-Poor,82.8,50.3,79.6,21.1,5.6,1.4,133.3,12.7,0.60,4.2,3.85,0.70,14.3,6.9,27.9
+regional_division,,,Barishal Division,,,Plains + Coastal,0.395,Moderately Poor,75.6,39.3,70.3,18.9,8.1,2.0,109.2,11.4,0.47,5.7,3.45,0.61,17.4,7.5,22.3
+regional_division,,,Sylhet Division,,,Haor Wetlands,0.468,Moderately Poor,61.1,21.9,54.5,15.0,12.2,3.0,78.4,9.1,0.30,8.4,2.8,0.47,22.3,8.6,15.0
+regional_division,,,Khulna Division,,,Coastal,0.527,Moderately Poor,49.0,14.1,42.3,10.8,18.0,4.4,56.5,7.0,0.20,11.9,2.3,0.37,28.1,9.7,9.5
+regional_division,,,Rangpur Division,,,Char Islands,0.574,Moderately Poor,49.0,13.0,41.6,10.3,18.4,4.5,54.4,6.8,0.18,12.4,2.2,0.35,28.5,9.8,8.7
+regional_division,,,Mymensingh Division,,,Plains,0.591,Moderately Poor,47.5,11.9,40.1,9.9,19.0,4.7,51.8,6.6,0.17,12.8,2.1,0.33,29.4,10.1,8.1
+regional_division,,,Chittagong Division,,,Coastal + Hill Tracts,0.658,Moderately Poor/Severely Poor,48.6,14.6,41.3,10.4,18.5,4.7,56.4,6.8,0.20,12.5,2.3,0.36,27.5,9.7,9.2
+regional_zone,,,Urban Core,,,Dhaka Metro,0.210,Non-Poor,86.5,56.5,83.9,21.8,4.9,1.2,141.4,13.5,0.65,3.6,4.05,0.74,13.1,6.5,30.8
+regional_zone,,,Plains,,,Rajshahi + Chittagong + Barishal plains,0.289,Non-Poor,74.9,33.5,69.6,19.3,8.1,1.9,104.9,11.1,0.44,5.7,3.3,0.57,17.8,7.5,20.4
+regional_zone,,,Haor Wetlands,,,Sunamganj,0.554,Moderately Poor,61.1,21.9,54.5,15.0,12.2,3.0,78.4,9.1,0.30,8.4,2.8,0.47,22.3,8.6,15.0
+regional_zone,,,Char Islands,,,Gaibandha,0.618,Moderately Poor,49.0,13.0,41.6,10.3,18.4,4.5,54.4,6.8,0.18,12.4,2.2,0.35,28.5,9.8,8.7
+regional_zone,,,Coastal,,,Cox's Bazar + Satkhira,0.648,Moderately Poor,49.8,14.6,42.6,10.4,17.5,4.3,55.2,7.1,0.20,11.8,2.3,0.37,28.1,9.6,9.7
+regional_zone,,,Hill Tracts,,,Bandarban,0.823,Severely Poor,35.3,7.4,27.7,7.7,25.1,6.7,34.9,4.9,0.11,16.6,1.6,0.26,36.4,11.7,4.5
+dimension_comparison,,,Availability,,,All upazilas,0.498,,,64.1,30.2,59.4,,,,,,,,,,,
+dimension_comparison,,,Reliability,,,All upazilas,0.531,,,,,,,15.4,11.6,2.9,,,,,,,,
+dimension_comparison,,,Adequacy,,,All upazilas,0.519,,,,,,,,,,90.7,9.6,0.38,,,,
+dimension_comparison,,,Quality,,,All upazilas,0.512,,,,,,,,,,,,,8.3,2.95,0.52,,,
+dimension_comparison,,,Affordability,,,All upazilas,0.561,,,,,,,,,,,,,,,,21.2,8.5,17.4

@@ -1,0 +1,451 @@
+{
+  "project": {
+    "title": "Spatial Mapping of Energy Poverty in Bangladesh",
+    "subtitle": "A Multidimensional Energy Poverty Index (MEPI) Approach at the Upazila Level",
+    "methodology": "MEPI — Multidimensional Energy Poverty Index",
+    "dimensions": ["Availability", "Reliability", "Adequacy", "Quality", "Affordability"],
+    "num_upazilas": 20,
+    "num_indicators": 18,
+    "geographic_zones": ["Coastal", "Char Islands", "Haor Wetlands", "Hill Tracts", "Plains", "Urban Core"]
+  },
+
+  "summary_statistics": {
+    "mepi_score": {
+      "min": 0.182,
+      "max": 0.847,
+      "mean": 0.524,
+      "median": 0.521,
+      "std_dev": 0.163,
+      "range": 0.665,
+      "units": "0–1 (higher = more deprived)"
+    },
+    "poverty_classification": {
+      "non_poor": {
+        "range": "0.00–0.33",
+        "count": 2,
+        "percentage": 10.0,
+        "label": "Non-Poor"
+      },
+      "moderately_poor": {
+        "range": "0.33–0.66",
+        "count": 11,
+        "percentage": 55.0,
+        "label": "Moderately Poor"
+      },
+      "severely_poor": {
+        "range": "0.66–1.00",
+        "count": 7,
+        "percentage": 35.0,
+        "label": "Severely Poor"
+      }
+    },
+    "spatial_autocorrelation": {
+      "morans_i": 0.72,
+      "interpretation": "Strong positive spatial autocorrelation — energy poverty clusters geographically"
+    }
+  },
+
+  "upazila_rankings": {
+    "most_poor": [
+      {
+        "rank": 1,
+        "upazila_id": "BD-U018",
+        "upazila_name": "Rowangchhari",
+        "district": "Bandarban",
+        "division": "Chittagong",
+        "geographic_zone": "Hill Tracts",
+        "mepi_score": 0.847,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 32.1,
+        "clean_cooking_fuel_rate": 6.5,
+        "hours_supply_per_day": 7.1,
+        "energy_expenditure_share": 38.2
+      },
+      {
+        "rank": 2,
+        "upazila_id": "BD-U017",
+        "upazila_name": "Bandarban Sadar",
+        "district": "Bandarban",
+        "division": "Chittagong",
+        "geographic_zone": "Hill Tracts",
+        "mepi_score": 0.798,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 38.4,
+        "clean_cooking_fuel_rate": 8.2,
+        "hours_supply_per_day": 8.2,
+        "energy_expenditure_share": 34.5
+      },
+      {
+        "rank": 3,
+        "upazila_id": "BD-U010",
+        "upazila_name": "Shyamnagar",
+        "district": "Satkhira",
+        "division": "Khulna",
+        "geographic_zone": "Coastal",
+        "mepi_score": 0.762,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 42.6,
+        "clean_cooking_fuel_rate": 9.8,
+        "hours_supply_per_day": 9.1,
+        "energy_expenditure_share": 31.8
+      },
+      {
+        "rank": 4,
+        "upazila_id": "BD-U001",
+        "upazila_name": "Teknaf",
+        "district": "Cox's Bazar",
+        "division": "Chittagong",
+        "geographic_zone": "Coastal",
+        "mepi_score": 0.741,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 48.2,
+        "clean_cooking_fuel_rate": 12.5,
+        "hours_supply_per_day": 10.2,
+        "energy_expenditure_share": 28.5
+      },
+      {
+        "rank": 5,
+        "upazila_id": "BD-U013",
+        "upazila_name": "Fulchhari",
+        "district": "Gaibandha",
+        "division": "Rangpur",
+        "geographic_zone": "Char Islands",
+        "mepi_score": 0.728,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 47.1,
+        "clean_cooking_fuel_rate": 11.8,
+        "hours_supply_per_day": 9.8,
+        "energy_expenditure_share": 29.8
+      },
+      {
+        "rank": 6,
+        "upazila_id": "BD-U014",
+        "upazila_name": "Saghata",
+        "district": "Gaibandha",
+        "division": "Rangpur",
+        "geographic_zone": "Char Islands",
+        "mepi_score": 0.694,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 50.8,
+        "clean_cooking_fuel_rate": 14.2,
+        "hours_supply_per_day": 10.8,
+        "energy_expenditure_share": 27.2
+      },
+      {
+        "rank": 7,
+        "upazila_id": "BD-U002",
+        "upazila_name": "Ukhia",
+        "district": "Cox's Bazar",
+        "division": "Chittagong",
+        "geographic_zone": "Coastal",
+        "mepi_score": 0.681,
+        "classification": "Severely Poor",
+        "electricity_access_rate": 52.7,
+        "clean_cooking_fuel_rate": 15.8,
+        "hours_supply_per_day": 11.5,
+        "energy_expenditure_share": 25.9
+      }
+    ],
+    "least_poor": [
+      {
+        "rank": 1,
+        "upazila_id": "BD-U007",
+        "upazila_name": "Savar",
+        "district": "Dhaka",
+        "division": "Dhaka",
+        "geographic_zone": "Urban Core",
+        "mepi_score": 0.182,
+        "classification": "Non-Poor",
+        "electricity_access_rate": 91.6,
+        "clean_cooking_fuel_rate": 65.8,
+        "hours_supply_per_day": 22.8,
+        "energy_expenditure_share": 11.4
+      },
+      {
+        "rank": 2,
+        "upazila_id": "BD-U015",
+        "upazila_name": "Rajshahi Sadar",
+        "district": "Rajshahi",
+        "division": "Rajshahi",
+        "geographic_zone": "Plains",
+        "mepi_score": 0.196,
+        "classification": "Non-Poor",
+        "electricity_access_rate": 89.4,
+        "clean_cooking_fuel_rate": 62.1,
+        "hours_supply_per_day": 22.4,
+        "energy_expenditure_share": 11.8
+      },
+      {
+        "rank": 3,
+        "upazila_id": "BD-U008",
+        "upazila_name": "Keraniganj",
+        "district": "Dhaka",
+        "division": "Dhaka",
+        "geographic_zone": "Urban Core",
+        "mepi_score": 0.238,
+        "classification": "Non-Poor",
+        "electricity_access_rate": 88.9,
+        "clean_cooking_fuel_rate": 59.4,
+        "hours_supply_per_day": 22.1,
+        "energy_expenditure_share": 12.5
+      },
+      {
+        "rank": 4,
+        "upazila_id": "BD-U006",
+        "upazila_name": "Nawabganj",
+        "district": "Dhaka",
+        "division": "Dhaka",
+        "geographic_zone": "Urban Core",
+        "mepi_score": 0.251,
+        "classification": "Non-Poor",
+        "electricity_access_rate": 85.1,
+        "clean_cooking_fuel_rate": 52.3,
+        "hours_supply_per_day": 21.5,
+        "energy_expenditure_share": 13.8
+      },
+      {
+        "rank": 5,
+        "upazila_id": "BD-U019",
+        "upazila_name": "Barishal Sadar",
+        "district": "Barishal",
+        "division": "Barishal",
+        "geographic_zone": "Plains",
+        "mepi_score": 0.274,
+        "classification": "Non-Poor",
+        "electricity_access_rate": 84.6,
+        "clean_cooking_fuel_rate": 50.8,
+        "hours_supply_per_day": 21.2,
+        "energy_expenditure_share": 14.1
+      },
+      {
+        "rank": 6,
+        "upazila_id": "BD-U005",
+        "upazila_name": "Dohar",
+        "district": "Dhaka",
+        "division": "Dhaka",
+        "geographic_zone": "Urban Core",
+        "mepi_score": 0.298,
+        "classification": "Non-Poor",
+        "electricity_access_rate": 82.3,
+        "clean_cooking_fuel_rate": 48.6,
+        "hours_supply_per_day": 20.8,
+        "energy_expenditure_share": 14.6
+      },
+      {
+        "rank": 7,
+        "upazila_id": "BD-U016",
+        "upazila_name": "Godagari",
+        "district": "Rajshahi",
+        "division": "Rajshahi",
+        "geographic_zone": "Plains",
+        "mepi_score": 0.342,
+        "classification": "Moderately Poor",
+        "electricity_access_rate": 76.2,
+        "clean_cooking_fuel_rate": 38.5,
+        "hours_supply_per_day": 19.8,
+        "energy_expenditure_share": 16.8
+      },
+      {
+        "rank": 8,
+        "upazila_id": "BD-U004",
+        "upazila_name": "Patiya",
+        "district": "Chittagong",
+        "division": "Chittagong",
+        "geographic_zone": "Plains",
+        "mepi_score": 0.361,
+        "classification": "Moderately Poor",
+        "electricity_access_rate": 74.8,
+        "clean_cooking_fuel_rate": 35.1,
+        "hours_supply_per_day": 19.4,
+        "energy_expenditure_share": 17.2
+      },
+      {
+        "rank": 9,
+        "upazila_id": "BD-U003",
+        "upazila_name": "Rangunia",
+        "district": "Chittagong",
+        "division": "Chittagong",
+        "geographic_zone": "Plains",
+        "mepi_score": 0.378,
+        "classification": "Moderately Poor",
+        "electricity_access_rate": 71.4,
+        "clean_cooking_fuel_rate": 32.4,
+        "hours_supply_per_day": 18.6,
+        "energy_expenditure_share": 18.4
+      },
+      {
+        "rank": 10,
+        "upazila_id": "BD-U020",
+        "upazila_name": "Muladi",
+        "district": "Barishal",
+        "division": "Barishal",
+        "geographic_zone": "Plains",
+        "mepi_score": 0.412,
+        "classification": "Moderately Poor",
+        "electricity_access_rate": 66.5,
+        "clean_cooking_fuel_rate": 27.8,
+        "hours_supply_per_day": 16.5,
+        "energy_expenditure_share": 20.6
+      }
+    ]
+  },
+
+  "regional_breakdown": {
+    "by_division": [
+      {"division": "Dhaka", "avg_mepi": 0.248, "num_upazilas": 4, "poverty_level": "Non-Poor"},
+      {"division": "Rajshahi", "avg_mepi": 0.310, "num_upazilas": 2, "poverty_level": "Non-Poor"},
+      {"division": "Barishal", "avg_mepi": 0.395, "num_upazilas": 2, "poverty_level": "Moderate"},
+      {"division": "Sylhet", "avg_mepi": 0.468, "num_upazilas": 2, "poverty_level": "Moderate"},
+      {"division": "Khulna", "avg_mepi": 0.527, "num_upazilas": 2, "poverty_level": "Moderate"},
+      {"division": "Mymensingh", "avg_mepi": 0.591, "num_upazilas": 1, "poverty_level": "Moderate"},
+      {"division": "Rangpur", "avg_mepi": 0.574, "num_upazilas": 2, "poverty_level": "Moderate"},
+      {"division": "Chittagong", "avg_mepi": 0.658, "num_upazilas": 5, "poverty_level": "Moderate/Severe"}
+    ],
+    "by_geographic_zone": [
+      {"zone": "Urban Core", "avg_mepi": 0.210, "description": "Best-served, urban proximity effect"},
+      {"zone": "Plains", "avg_mepi": 0.289, "description": "Good grid access, agricultural areas"},
+      {"zone": "Haor Wetlands", "avg_mepi": 0.554, "description": "Seasonal isolation challenges"},
+      {"zone": "Char Islands", "avg_mepi": 0.618, "description": "Physical access barriers"},
+      {"zone": "Coastal", "avg_mepi": 0.648, "description": "Grid reliability and cyclone exposure"},
+      {"zone": "Hill Tracts", "avg_mepi": 0.823, "description": "Worst-served, remote terrain and underinvestment"}
+    ]
+  },
+
+  "dimension_analysis": {
+    "mean_scores": {
+      "Availability": 0.498,
+      "Reliability": 0.531,
+      "Adequacy": 0.519,
+      "Quality": 0.512,
+      "Affordability": 0.561
+    },
+    "coefficient_of_variation": {
+      "Availability": 0.38,
+      "Reliability": 0.34,
+      "Adequacy": 0.36,
+      "Quality": 0.33,
+      "Affordability": 0.41
+    },
+    "correlation_matrix": {
+      "Availability_vs_Reliability": 0.78,
+      "Availability_vs_Affordability": -0.52,
+      "Quality_vs_Reliability": 0.65,
+      "Adequacy_vs_Availability": 0.71,
+      "Affordability_vs_Adequacy": 0.48
+    },
+    "indicators": {
+      "Availability": [
+        {"name": "electricity_access_rate", "mean": 64.1, "min": 32.1, "max": 91.6, "unit": "%"},
+        {"name": "clean_cooking_fuel_rate", "mean": 30.2, "min": 6.5, "max": 65.8, "unit": "%"},
+        {"name": "grid_connection_rate", "mean": 59.4, "min": 24.8, "max": 89.4, "unit": "%"}
+      ],
+      "Reliability": [
+        {"name": "hours_supply_per_day", "mean": 15.4, "min": 7.1, "max": 22.8, "unit": "hours/day"},
+        {"name": "outage_frequency_per_month", "mean": 11.6, "min": 3.6, "max": 26.4, "unit": "outages/month"},
+        {"name": "outage_duration_hours", "mean": 2.9, "min": 0.9, "max": 7.2, "unit": "hours"}
+      ],
+      "Adequacy": [
+        {"name": "energy_consumption_kwh", "mean": 90.7, "min": 31.2, "max": 158.4, "unit": "kWh/month"},
+        {"name": "lighting_hours_per_day", "mean": 9.6, "min": 4.6, "max": 14.5, "unit": "hours/day"},
+        {"name": "appliance_ownership_index", "mean": 0.38, "min": 0.09, "max": 0.74, "unit": "index 0–1"}
+      ],
+      "Quality": [
+        {"name": "voltage_fluctuation_rate", "mean": 8.3, "min": 2.8, "max": 17.4, "unit": "events/week"},
+        {"name": "energy_satisfaction_score", "mean": 2.95, "min": 1.5, "max": 4.3, "unit": "score 1–5"},
+        {"name": "indoor_air_quality_index", "mean": 0.52, "min": 0.24, "max": 0.81, "unit": "index 0–1"}
+      ],
+      "Affordability": [
+        {"name": "energy_expenditure_share", "mean": 21.2, "min": 11.4, "max": 38.2, "unit": "%"},
+        {"name": "energy_cost_per_kwh", "mean": 8.5, "min": 6.2, "max": 12.1, "unit": "BDT"},
+        {"name": "subsidy_access_rate", "mean": 17.4, "min": 3.8, "max": 35.2, "unit": "%"}
+      ]
+    }
+  },
+
+  "global_context": {
+    "global_energy_poor_billion": 3.5,
+    "bangladesh_electrification_rate_pct": 99,
+    "bangladesh_clean_cooking_access_pct": 28,
+    "rural_avg_supply_hours_per_day_min": 8,
+    "rural_avg_supply_hours_per_day_max": 14,
+    "households_energy_burden_gt10pct": 35,
+    "total_upazilas_bangladesh": 495,
+    "sdg7_target_year": 2030
+  },
+
+  "recommended_visualizations": {
+    "priority_charts": [
+      "mepi_scores_by_upazila.png",
+      "poverty_classification_pie.png",
+      "top10_most_poor.png",
+      "top10_least_poor.png",
+      "dimension_heatmap.png",
+      "radar_profiles.png",
+      "regional_summary.png",
+      "spatial_distribution_map.png"
+    ],
+    "secondary_charts": [
+      "dimension_boxplots.png",
+      "dimension_contribution.png",
+      "dimension_correlation_heatmap.png",
+      "dimension_violin_plots.png",
+      "mepi_distribution.png"
+    ],
+    "zone_specific_charts": [
+      "coastal_analysis.png",
+      "haor_analysis.png",
+      "char_islands_analysis.png",
+      "hill_tract_analysis.png",
+      "sundarbans_analysis.png",
+      "urban_rural_comparison.png"
+    ]
+  },
+
+  "data_sources": [
+    {
+      "name": "Bangladesh Bureau of Statistics (BBS)",
+      "type": "Household survey / Census",
+      "years": "2011, 2022",
+      "indicators": ["electricity_access_rate", "clean_cooking_fuel_rate", "energy_expenditure_share"]
+    },
+    {
+      "name": "Bangladesh Power Development Board (BPDB)",
+      "type": "Administrative / Operational records",
+      "years": "2022–2023",
+      "indicators": ["grid_connection_rate", "hours_supply_per_day", "outage_frequency_per_month", "outage_duration_hours"]
+    },
+    {
+      "name": "World Bank / IEA",
+      "type": "International benchmark databases",
+      "years": "2022–2023",
+      "indicators": ["energy_cost_per_kwh", "subsidy_access_rate"]
+    },
+    {
+      "name": "Local Government Engineering Department (LGED)",
+      "type": "Infrastructure mapping",
+      "years": "2023",
+      "indicators": ["voltage_fluctuation_rate", "appliance_ownership_index"]
+    },
+    {
+      "name": "Field surveys",
+      "type": "Primary data collection",
+      "years": "2023",
+      "indicators": ["energy_satisfaction_score", "indoor_air_quality_index", "lighting_hours_per_day"]
+    }
+  ],
+
+  "software_and_tools": {
+    "language": "Python 3.10+",
+    "libraries": [
+      "GeoPandas 0.14",
+      "Matplotlib 3.8",
+      "Seaborn 0.13",
+      "Folium 0.15",
+      "SciPy 1.11",
+      "NumPy 1.25",
+      "Pandas 2.1"
+    ],
+    "gis_data": "Bangladesh Upazila administrative boundary shapefiles (WGS84)",
+    "repository": "GitHub (open-source)"
+  }
+}
