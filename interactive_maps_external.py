@@ -159,6 +159,20 @@ class InteractiveMapsExternal:
     def create_interactive_regional_map(self) -> Optional[str]:
         """Create a regional zone overlay interactive map."""
         filename = "interactive_regional_map.html"
+
+        # District-to-zone mapping for filtering
+        _ZONE_DISTRICTS = {
+            "Coastal":      ["cox's bazar", "chittagong", "feni", "noakhali", "lakshmipur",
+                             "chandpur", "barisal", "patuakhali", "bhola", "barguna",
+                             "pirojpur", "jhalokati"],
+            "Char Islands": ["bhola", "noakhali", "lakshmipur", "chandpur", "shariatpur",
+                             "madaripur"],
+            "Haor Wetlands":["sunamganj", "sylhet", "moulvibazar", "habiganj",
+                             "kishoreganj", "netrokona", "mymensingh"],
+            "Hill Tracts":  ["rangamati", "khagrachhari", "bandarban"],
+            "Sundarbans":   ["satkhira", "khulna", "bagerhat"],
+        }
+
         try:
             import folium
 
@@ -169,18 +183,26 @@ class InteractiveMapsExternal:
             )
 
             zone_colors = {
-                "Coastal": "#2196F3",
+                "Coastal":      "#2196F3",
                 "Char Islands": "#FF9800",
-                "Haor Wetlands": "#4CAF50",
-                "Hill Tracts": "#795548",
-                "Sundarbans": "#009688",
+                "Haor Wetlands":"#4CAF50",
+                "Hill Tracts":  "#795548",
+                "Sundarbans":   "#009688",
             }
 
             valid = self.df.dropna(subset=["lat", "lon", "mepi_score"])
+
             for zone_name, color in zone_colors.items():
                 layer = folium.FeatureGroup(name=zone_name, show=True)
-                # Subset by division/district if available; otherwise show all
-                subset = valid
+
+                # Filter to zone districts if district column is available
+                districts = [d.lower() for d in _ZONE_DISTRICTS.get(zone_name, [])]
+                if "district" in valid.columns and districts:
+                    subset = valid[valid["district"].fillna("").str.lower().isin(districts)]
+                else:
+                    # Fallback: show a representative sample from all upazilas
+                    subset = valid.iloc[::max(1, len(valid) // 10)]  # every Nth row
+
                 for _, row in subset.iterrows():
                     folium.CircleMarker(
                         location=[row["lat"], row["lon"]],
@@ -189,10 +211,12 @@ class InteractiveMapsExternal:
                         fill=True,
                         fill_color=color,
                         fill_opacity=0.6,
-                        tooltip=f"{row.get('upazila_name', '')} – MEPI: {row['mepi_score']:.3f}",
+                        tooltip=(
+                            f"{row.get('upazila_name', '')} [{zone_name}]"
+                            f" – MEPI: {row['mepi_score']:.3f}"
+                        ),
                     ).add_to(layer)
                 layer.add_to(m)
-                break  # Add one example layer; with real zone data, iterate all zones
 
             folium.LayerControl().add_to(m)
 
@@ -352,7 +376,7 @@ def _attach_coords(df: pd.DataFrame) -> pd.DataFrame:
         from bangladesh_coordinates import get_database
         db = get_database()
         lats, lons = [], []
-        for name in df.get("upazila_name", []):
+        for name in (df["upazila_name"] if "upazila_name" in df.columns else []):
             rec = db.get_by_name(str(name))
             lats.append(rec["lat"] if rec else np.nan)
             lons.append(rec["lon"] if rec else np.nan)

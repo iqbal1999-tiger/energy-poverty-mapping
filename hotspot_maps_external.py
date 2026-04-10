@@ -345,7 +345,7 @@ def _attach_coords(df: pd.DataFrame) -> pd.DataFrame:
         from bangladesh_coordinates import get_database
         db = get_database()
         lats, lons = [], []
-        for name in df.get("upazila_name", []):
+        for name in (df["upazila_name"] if "upazila_name" in df.columns else []):
             rec = db.get_by_name(str(name))
             lats.append(rec["lat"] if rec else np.nan)
             lons.append(rec["lon"] if rec else np.nan)

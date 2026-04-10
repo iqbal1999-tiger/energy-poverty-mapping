@@ -252,6 +252,15 @@ class ExternalMapDocGenerator:
 
         now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
+        # Build navigation links as a separate variable for clarity
+        nav_section_names = list(sections.keys()) + [
+            name for name in html_sections.keys() if name not in sections
+        ]
+        nav_links = "".join(
+            f'<a href="#{name}">{name.replace("_", " ").title()}</a>'
+            for name in nav_section_names
+        )
+
         html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -357,10 +366,7 @@ class ExternalMapDocGenerator:
   </header>
   <nav>
     <strong>Jump to:</strong>
-    {"".join(
-        f'<a href="#{name}">{name.replace("_", " ").title()}</a>'
-        for name in list(sections.keys()) + list(html_sections.keys())
-    )}
+    {nav_links}
   </nav>
 {section_html}
   <footer>
